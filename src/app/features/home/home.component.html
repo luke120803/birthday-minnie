@@ -1,0 +1,72 @@
+<div class="home">
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Feliz Aniversário, Minnie! 🎉</h1>
+            <p class="hero-subtitle animate-fade-in-delay">
+                Um site especial criado com muito carinho pelos seus amigos
+            </p>
+            <img
+                    src="assets/images/foto.home.jpeg"
+                    alt="Foto especial da Minnie"
+                    class="hero-image animate-scale-in"
+            />
+        </div>
+    </section>
+
+    <section class="introduction">
+        <div class="container">
+            <h2 class="section-title">Uma Pessoa Especial</h2>
+            <p class="intro-text">
+                Minnie, hoje celebramos não apenas mais um ano da sua vida, mas também
+                a pessoa incrível que você é. Sua alegria, bondade e energia positiva
+                tocam o coração de todos ao seu redor. Este site foi criado com muito
+                amor pelos seus amigos, cada um contribuindo com suas próprias palavras
+                de carinho e admiração.
+            </p>
+            <p class="intro-text">
+                Navegue pelas mensagens especiais, veja as fotos que capturam momentos
+                preciosos e acompanhe a contagem regressiva para o seu grande dia.
+                Que este novo ano seja repleto de realizações, sorrisos e momentos
+                inesquecíveis!
+            </p>
+        </div>
+    </section>
+
+    <section class="friends-preview">
+        <div class="container">
+            <h2 class="section-title">Mensagens dos Amigos</h2>
+            <div class="friends-grid">
+                <div
+                        *ngFor="let friend of friends"
+                        class="friend-card"
+                        [style.background-color]="friend.backgroundColor"
+                        [style.color]="friend.textColor"
+                        [routerLink]="['/friends', friend.id]"
+                >
+                    <img [src]="friend.photo" [alt]="friend.name" class="friend-photo">
+                    <h3>{{ friend.name }}</h3>
+                    <p class="friend-preview">{{ getPreviewMessage(friend.message) }}</p>
+                    <span class="read-more">Ler mensagem completa →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title">Explore Mais</h2>
+            <div class="links-grid">
+                <a routerLink="/gallery" class="quick-link">
+                    <div class="link-icon">📸</div>
+                    <h3>Galeria</h3>
+                    <p>Veja fotos especiais e momentos marcantes</p>
+                </a>
+                <a routerLink="/countdown" class="quick-link">
+                    <div class="link-icon">⏰</div>
+                    <h3>Countdown</h3>
+                    <p>Contagem regressiva para o grande dia</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

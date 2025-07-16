@@ -1,0 +1,53 @@
+<div class="tribute" *ngIf="friend" [style.background-color]="friend.backgroundColor">
+    <div class="container">
+        <button class="back-button" (click)="goBack()">
+            ← Voltar
+        </button>
+
+        <div class="tribute-content">
+            <div class="friend-photo-container">
+                <img [src]="friend.photo" [alt]="friend.name" class="friend-photo">
+                <div class="photo-frame"></div>
+            </div>
+
+            <div class="tribute-text">
+                <h1 class="friend-name" [style.color]="friend.textColor">{{ friend.name }}</h1>
+                <div class="message-container">
+                    <p class="friend-message" [style.color]="friend.textColor">{{ friend.message }}</p>
+                    <div class="message-decoration">💕</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button
+                    class="nav-button prev"
+                    (click)="previousFriend()"
+                    *ngIf="previousFriendId"
+                    [style.background-color]="friend.textColor"
+            >
+                ← {{ getPreviousFriendName() }}
+            </button>
+
+            <button
+                    class="nav-button next"
+                    (click)="nextFriend()"
+                    *ngIf="nextFriendId"
+                    [style.background-color]="friend.textColor"
+            >
+                {{ getNextFriendName() }} →
+            </button>
+        </div>
+
+        <div class="tribute-footer">
+            <p [style.color]="friend.textColor">
+                Com muito carinho, em homenagem à querida Minnie 🎉
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="loading" *ngIf="!friend">
+    <div class="loading-spinner"></div>
+    <p>Carregando...</p>
+</div>
