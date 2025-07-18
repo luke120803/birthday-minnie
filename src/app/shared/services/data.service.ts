@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Friend, GalleryImage } from '../interfaces/friend.interface';
+import {Injectable} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {Friend, GalleryImage} from '../interfaces/friend.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -34,7 +34,7 @@ export class DataService {
         {
             id: 'paula',
             name: 'Paula',
-            photo: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.paula.jpeg',
             message: 'Parabéns, Minnie! Sua energia positiva contagia a todos. Que este novo ciclo seja repleto de conquistas e felicidade! 🎂',
             backgroundColor: '#FFF8DC',
             textColor: '#B8860B'
@@ -42,7 +42,7 @@ export class DataService {
         {
             id: 'sophia',
             name: 'Sophia',
-            photo: 'https://images.pexels.com/photos/1548772/pexels-photo-1548772.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.sophia.jpeg',
             message: 'Minnie, você é sinônimo de alegria e bondade! Que seu aniversário seja o início de um ano incrível cheio de bênçãos! 🌸',
             backgroundColor: '#F5F5DC',
             textColor: '#8B4513'
@@ -50,7 +50,7 @@ export class DataService {
         {
             id: 'pedro',
             name: 'Pedro',
-            photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.pedro.jpeg',
             message: 'Feliz aniversário, Minnie! Sua amizade é valiosa e sua presença sempre traz sorrisos. Parabéns por mais um ano de vida! 🎊',
             backgroundColor: '#E0FFFF',
             textColor: '#008B8B'
@@ -58,7 +58,7 @@ export class DataService {
         {
             id: 'julia',
             name: 'Julia',
-            photo: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.julia.jpeg',
             message: 'Querida Minnie, você é uma pessoa única e especial! Que seu aniversário seja repleto de momentos mágicos e muita felicidade! ✨',
             backgroundColor: '#FFF0F5',
             textColor: '#C71585'
@@ -66,7 +66,7 @@ export class DataService {
         {
             id: 'thiago',
             name: 'Thiago',
-            photo: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.thiago.jpeg',
             message: 'Parabéns, Minnie! Sua personalidade carismática faz toda a diferença. Desejo que este ano seja cheio de realizações pessoais! 🎈',
             backgroundColor: '#F0FFFF',
             textColor: '#2F4F4F'
@@ -74,7 +74,7 @@ export class DataService {
         {
             id: 'tirza',
             name: 'Tirza',
-            photo: 'https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=400',
+            photo: 'assets/images/foto.tirza.jpeg',
             message: 'Minnie, você é uma inspiração para todos nós! Que seu aniversário seja o início de novos sonhos realizados. Parabéns! 🌺',
             backgroundColor: '#FFFACD',
             textColor: '#8B4513'
@@ -124,7 +124,7 @@ export class DataService {
         },
         {
             id: '6',
-            url: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.paula.jpeg',
             alt: 'Paula - Energia positiva',
             caption: 'Paula irradiando energia positiva',
             friendId: 'paula',
@@ -132,7 +132,7 @@ export class DataService {
         },
         {
             id: '7',
-            url: 'https://images.pexels.com/photos/1548772/pexels-photo-1548772.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.sophia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Sophia - Elegância natural',
             caption: 'Sophia com sua elegância natural',
             friendId: 'sophia',
@@ -140,7 +140,7 @@ export class DataService {
         },
         {
             id: '8',
-            url: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.pedro.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Pedro - Carisma único',
             caption: 'Pedro com seu carisma único',
             friendId: 'pedro',
@@ -148,7 +148,7 @@ export class DataService {
         },
         {
             id: '9',
-            url: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Julia - Personalidade marcante',
             caption: 'Julia com sua personalidade marcante',
             friendId: 'julia',
@@ -156,7 +156,7 @@ export class DataService {
         },
         {
             id: '10',
-            url: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Thiago - Momento divertido',
             caption: 'Thiago em um momento divertido',
             friendId: 'thiago',
@@ -164,7 +164,7 @@ export class DataService {
         },
         {
             id: '11',
-            url: 'https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Tirza - Inspiração constante',
             caption: 'Tirza sendo uma inspiração',
             friendId: 'tirza',
@@ -172,7 +172,7 @@ export class DataService {
         },
         {
             id: '12',
-            url: 'https://images.pexels.com/photos/1729931/pexels-photo-1729931.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.lucas.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Lokkas - Celebração especial',
             caption: 'Lokkas em uma celebração especial',
             friendId: 'lokkas',
@@ -180,7 +180,7 @@ export class DataService {
         },
         {
             id: '13',
-            url: 'https://images.pexels.com/photos/1071882/pexels-photo-1071882.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.moih.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Moih - Momento de felicidade',
             caption: 'Moih em um momento de pura felicidade',
             friendId: 'moih',
@@ -188,7 +188,7 @@ export class DataService {
         },
         {
             id: '14',
-            url: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/foto.nicole.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Nicole - Espontaneidade',
             caption: 'Nicole sendo espontânea como sempre',
             friendId: 'nicole',

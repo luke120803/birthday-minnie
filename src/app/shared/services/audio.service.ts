@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -70,7 +70,6 @@ export class AudioService {
 
     // Música de fundo por amigo
     playFriendBackgroundMusic(friendId: string): void {
-        // Friend background music functionality disabled
     }
 
     stopCurrentBackgroundMusic(): void {

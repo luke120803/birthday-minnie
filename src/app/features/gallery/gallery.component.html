@@ -43,13 +43,6 @@
                         <h2 [style.color]="friendGallery.friend.textColor">{{ friendGallery.friend.name }}</h2>
                         <p [style.color]="friendGallery.friend.textColor">{{ friendGallery.images.length }} {{ friendGallery.images.length === 1 ? 'foto' : 'fotos' }}</p>
                     </div>
-                    <button
-                            class="play-music-btn"
-                            [style.background-color]="friendGallery.friend.textColor"
-                            title="Tocar música do {{ friendGallery.friend.name }}"
-                    >
-                        🎵
-                    </button>
                 </div>
 
                 <div class="friend-images">
@@ -107,7 +100,8 @@
         <div class="lightbox-content" (click)="$event.stopPropagation()">
             <button class="close-btn" (click)="closeLightbox()">×</button>
             <button class="nav-btn prev-btn" (click)="previousImage()" *ngIf="selectedImageIndex > 0">‹</button>
-            <button class="nav-btn next-btn" (click)="nextImage()" *ngIf="selectedImageIndex < allImages.length - 1">›</button>
+            <button class="nav-btn next-btn" (click)="nextImage()" *ngIf="selectedImageIndex < allImages.length - 1">›
+            </button>
 
             <img
                     [src]="allImages[selectedImageIndex].url"
