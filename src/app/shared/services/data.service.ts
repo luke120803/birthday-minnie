@@ -11,7 +11,10 @@ export class DataService {
             id: 'lokkas',
             name: 'Lokkas',
             photo: 'assets/images/foto.lucas.jpeg',
-            message: 'Minnie, você é uma das pessoas mais especiais que conheço! Que seu aniversário seja repleto de alegria e realizações. Parabéns, querida! 🎉',
+            messages: [
+                { year: 2024, text: 'Feliz aniversário, Minnie! Celebrando mais um ano da sua vida incrível!' },
+                { year: 2025, text: 'Minnie, você é uma das pessoas mais especiais que conheço! Que seu aniversário seja repleto de alegria e realizações. Parabéns, querida! 🎉' }
+            ],
             backgroundColor: '#FFE4E1',
             textColor: '#8B4513'
         },
@@ -19,7 +22,10 @@ export class DataService {
             id: 'moih',
             name: 'Moih',
             photo: 'assets/images/foto.moih.jpeg',
-            message: 'Feliz aniversário, Minnie! Sua amizade é um presente em nossas vidas. Que este novo ano seja cheio de aventuras maravilhosas! 🌟',
+            messages: [
+                { year: 2024, text: 'Parabéns pelo seu dia no ano passado! Sempre bom celebrar você.' },
+                { year: 2025, text: 'Feliz aniversário, Minnie! Sua amizade é um presente em nossas vidas. Que este novo ano seja cheio de aventuras maravilhosas! 🌟' }
+            ],
             backgroundColor: '#E6E6FA',
             textColor: '#4B0082'
         },
@@ -27,7 +33,10 @@ export class DataService {
             id: 'nicole',
             name: 'Nicole',
             photo: 'assets/images/foto.nicole.jpeg',
-            message: 'Querida Minnie, você ilumina todos os ambientes com sua presença! Desejo que seu aniversário seja tão especial quanto você é para nós! 💕',
+            messages: [
+                { year: 2024, text: 'Lembrando do seu brilho no ano passado. Feliz aniversário de novo!' },
+                { year: 2025, text: 'Querida Minnie, você ilumina todos os ambientes com sua presença! Desejo que seu aniversário seja tão especial quanto você é para nós! 💕' }
+            ],
             backgroundColor: '#F0F8FF',
             textColor: '#191970'
         },
@@ -35,7 +44,10 @@ export class DataService {
             id: 'paula',
             name: 'Paula',
             photo: 'assets/images/foto.paula.jpeg',
-            message: 'Parabéns, Minnie! Sua energia positiva contagia a todos. Que este novo ciclo seja repleto de conquistas e felicidade! 🎂',
+            messages: [
+                { year: 2024, text: 'Sua energia contagiante marcou o ano passado. Parabéns!' },
+                { year: 2025, text: 'Parabéns, Minnie! Sua energia positiva contagia a todos. Que este novo ciclo seja repleto de conquistas e felicidade! 🎂' }
+            ],
             backgroundColor: '#FFF8DC',
             textColor: '#B8860B'
         },
@@ -43,7 +55,10 @@ export class DataService {
             id: 'sophia',
             name: 'Sophia',
             photo: 'assets/images/foto.sophia.jpeg',
-            message: 'Minnie, você é sinônimo de alegria e bondade! Que seu aniversário seja o início de um ano incrível cheio de bênçãos! 🌸',
+            messages: [
+                { year: 2024, text: 'Mais um ano celebrando sua alegria e bondade. Parabéns, Minnie!' },
+                { year: 2025, text: 'Minnie, você é sinônimo de alegria e bondade! Que seu aniversário seja o início de um ano incrível cheio de bênçãos! 🌸' }
+            ],
             backgroundColor: '#F5F5DC',
             textColor: '#8B4513'
         },
@@ -51,7 +66,10 @@ export class DataService {
             id: 'pedro',
             name: 'Pedro',
             photo: 'assets/images/foto.pedro.jpeg',
-            message: 'Feliz aniversário, Minnie! Sua amizade é valiosa e sua presença sempre traz sorrisos. Parabéns por mais um ano de vida! 🎊',
+            messages: [
+                { year: 2024, text: 'Feliz aniversário! Que a celebração do ano passado se repita com ainda mais alegria.' },
+                { year: 2025, text: 'Feliz aniversário, Minnie! Sua amizade é valiosa e sua presença sempre traz sorrisos. Parabéns por mais um ano de vida! 🎊' }
+            ],
             backgroundColor: '#E0FFFF',
             textColor: '#008B8B'
         },
@@ -59,7 +77,10 @@ export class DataService {
             id: 'julia',
             name: 'Julia',
             photo: 'assets/images/foto.julia.jpeg',
-            message: 'Querida Minnie, você é uma pessoa única e especial! Que seu aniversário seja repleto de momentos mágicos e muita felicidade! ✨',
+            messages: [
+                { year: 2024, text: 'Celebrando a pessoa única que você é, hoje e sempre. Parabéns!'},
+                { year: 2025, text: 'Querida Minnie, você é uma pessoa única e especial! Que seu aniversário seja repleto de momentos mágicos e muita felicidade! ✨' }
+            ],
             backgroundColor: '#FFF0F5',
             textColor: '#C71585'
         },
@@ -67,7 +88,10 @@ export class DataService {
             id: 'thiago',
             name: 'Thiago',
             photo: 'assets/images/foto.thiago.jpeg',
-            message: 'Parabéns, Minnie! Sua personalidade carismática faz toda a diferença. Desejo que este ano seja cheio de realizações pessoais! 🎈',
+            messages: [
+                { year: 2024, text: 'Seu carisma fez a diferença no ano passado e continua fazendo. Parabéns!' },
+                { year: 2025, text: 'Parabéns, Minnie! Sua personalidade carismática faz toda a diferença. Desejo que este ano seja cheio de realizações pessoais! 🎈' }
+            ],
             backgroundColor: '#F0FFFF',
             textColor: '#2F4F4F'
         },
@@ -75,7 +99,10 @@ export class DataService {
             id: 'tirza',
             name: 'Tirza',
             photo: 'assets/images/foto.tirza.jpeg',
-            message: 'Minnie, você é uma inspiração para todos nós! Que seu aniversário seja o início de novos sonhos realizados. Parabéns! 🌺',
+            messages: [
+                { year: 2024, text: 'Uma inspiração no ano que passou e sempre. Feliz aniversário!' },
+                { year: 2025, text: 'Minnie, você é uma inspiração para todos nós! Que seu aniversário seja o início de novos sonhos realizados. Parabéns! 🌺' }
+            ],
             backgroundColor: '#FFFACD',
             textColor: '#8B4513'
         }
@@ -84,7 +111,7 @@ export class DataService {
     private galleryImages: GalleryImage[] = [
         {
             id: '1',
-            url: 'assets/images/foto.lucas.jpeg',
+            url: 'assets/images/foto.lucas02.jpeg',
             alt: 'Lucas - Foto pessoal',
             caption: 'Lucas em um momento especial',
             friendId: 'lokkas',
@@ -116,14 +143,6 @@ export class DataService {
         },
         {
             id: '5',
-            url: 'assets/images/foto.home.jpeg',
-            alt: 'Foto especial da casa/família',
-            caption: 'Momento especial em casa',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
-        },
-        {
-            id: '6',
             url: 'assets/images/foto.paula.jpeg',
             alt: 'Paula - Energia positiva',
             caption: 'Paula irradiando energia positiva',
@@ -131,7 +150,7 @@ export class DataService {
             friendName: 'Paula'
         },
         {
-            id: '7',
+            id: '6',
             url: 'assets/images/foto.sophia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Sophia - Elegância natural',
             caption: 'Sophia com sua elegância natural',
@@ -139,7 +158,7 @@ export class DataService {
             friendName: 'Sophia'
         },
         {
-            id: '8',
+            id: '7',
             url: 'assets/images/foto.pedro.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Pedro - Carisma único',
             caption: 'Pedro com seu carisma único',
@@ -147,7 +166,7 @@ export class DataService {
             friendName: 'Pedro'
         },
         {
-            id: '9',
+            id: '8',
             url: 'assets/images/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Julia - Personalidade marcante',
             caption: 'Julia com sua personalidade marcante',
@@ -155,7 +174,7 @@ export class DataService {
             friendName: 'Julia'
         },
         {
-            id: '10',
+            id: '9',
             url: 'assets/images/foto.thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Thiago - Momento divertido',
             caption: 'Thiago em um momento divertido',
@@ -163,37 +182,13 @@ export class DataService {
             friendName: 'Thiago'
         },
         {
-            id: '11',
+            id: '10',
             url: 'assets/images/foto.tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Tirza - Inspiração constante',
             caption: 'Tirza sendo uma inspiração',
             friendId: 'tirza',
             friendName: 'Tirza'
         },
-        {
-            id: '12',
-            url: 'assets/images/foto.lucas.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Lokkas - Celebração especial',
-            caption: 'Lokkas em uma celebração especial',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
-        },
-        {
-            id: '13',
-            url: 'assets/images/foto.moih.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Moih - Momento de felicidade',
-            caption: 'Moih em um momento de pura felicidade',
-            friendId: 'moih',
-            friendName: 'Moih'
-        },
-        {
-            id: '14',
-            url: 'assets/images/foto.nicole.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Nicole - Espontaneidade',
-            caption: 'Nicole sendo espontânea como sempre',
-            friendId: 'nicole',
-            friendName: 'Nicole'
-        }
     ];
 
     getFriends(): Observable<Friend[]> {

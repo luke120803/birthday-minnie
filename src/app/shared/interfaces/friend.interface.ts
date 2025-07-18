@@ -2,9 +2,14 @@ export interface Friend {
     id: string;
     name: string;
     photo: string;
-    message: string;
     backgroundColor: string;
     textColor: string;
+    messages: MessageHistory[];
+}
+
+export interface MessageHistory {
+    year: number;
+    text: string;
 }
 
 export interface CountdownTime {

@@ -45,8 +45,7 @@
                 >
                     <img [src]="friend.photo" [alt]="friend.name" class="friend-photo">
                     <h3>{{ friend.name }}</h3>
-                    <p class="friend-preview">{{ getPreviewMessage(friend.message) }}</p>
-                    <span class="read-more">Ler mensagem completa →</span>
+                    <p class="friend-preview">{{ getPreviewMessage(friend.messages) }}</p>                    <span class="read-more">Ler mensagem completa →</span>
                 </div>
             </div>
         </div>

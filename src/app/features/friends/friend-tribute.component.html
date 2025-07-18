@@ -13,7 +13,7 @@
             <div class="tribute-text">
                 <h1 class="friend-name" [style.color]="friend.textColor">{{ friend.name }}</h1>
                 <div class="message-container">
-                    <p class="friend-message" [style.color]="friend.textColor">{{ friend.message }}</p>
+                    <p class="friend-message" [style.color]="friend.textColor">{{getPreviewMessage( friend.messages)}}</p>
                     <div class="message-decoration">💕</div>
                 </div>
             </div>
