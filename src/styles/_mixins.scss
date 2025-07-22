@@ -1,0 +1,421 @@
+// =============================================================================
+// MIXINS SCSS - UTILITÁRIOS REUTILIZÁVEIS
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// MIXINS DE RESPONSIVIDADE
+// -----------------------------------------------------------------------------
+
+/**
+ * Mixin para dispositivos móveis
+ * @example @include mobile { font-size: 14px; }
+ */
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+/**
+ * Mixin para tablets
+ * @example @include tablet { padding: 2rem; }
+ */
+@mixin tablet {
+  @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+/**
+ * Mixin para desktop
+ * @example @include desktop { grid-columns: 3; }
+ */
+@mixin desktop {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+/**
+ * Mixin para telas grandes
+ * @example @include large-screen { max-width: 1400px; }
+ */
+@mixin large-screen {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE LAYOUT
+// -----------------------------------------------------------------------------
+
+/**
+ * Container responsivo centralizado
+ * @example @include container;
+ */
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+
+  @include mobile {
+    padding: 0 $container-padding-mobile;
+  }
+}
+
+/**
+ * Flexbox centralizado
+ * @example @include flex-center;
+ */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * Grid responsivo
+ * @param {number} $columns - Número de colunas
+ * @param {length} $gap - Espaçamento entre itens
+ * @example @include grid(3, 2rem);
+ */
+@mixin grid($columns: 1, $gap: $spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE TIPOGRAFIA
+// -----------------------------------------------------------------------------
+
+/**
+ * Título de página
+ * @example @include page-title;
+ */
+@mixin page-title {
+  font-family: $font-family-serif;
+  font-size: $font-size-xxxl;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-semibold;
+
+  @include mobile {
+    font-size: $font-size-xxl;
+  }
+}
+
+/**
+ * Subtítulo de página
+ * @example @include page-subtitle;
+ */
+@mixin page-subtitle {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  line-height: $line-height-relaxed;
+
+  @include mobile {
+    font-size: $font-size-base;
+  }
+}
+
+/**
+ * Texto truncado com ellipsis
+ * @example @include text-ellipsis;
+ */
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE BOTÕES
+// -----------------------------------------------------------------------------
+
+/**
+ * Botão base
+ * @example @include button-base;
+ */
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: $border-radius-md;
+  font-family: inherit;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  user-select: none;
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/**
+ * Botão primário
+ * @example @include button-primary;
+ */
+@mixin button-primary {
+  @include button-base;
+  background: $primary-color;
+  color: $text-primary;
+  padding: $button-padding-y $button-padding-x;
+
+  &:hover:not(:disabled) {
+    background: darken($primary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+/**
+ * Botão circular
+ * @example @include button-circle;
+ */
+@mixin button-circle {
+  @include button-base;
+  border-radius: $border-radius-circle;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE CARDS
+// -----------------------------------------------------------------------------
+
+/**
+ * Card base
+ * @example @include card-base;
+ */
+@mixin card-base {
+  background: $white;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+}
+
+/**
+ * Card com hover effect
+ * @example @include card-hover;
+ */
+@mixin card-hover {
+  @include card-base;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE AVATARES
+// -----------------------------------------------------------------------------
+
+/**
+ * Avatar pequeno
+ * @example @include avatar-small;
+ */
+@mixin avatar-small {
+  width: $avatar-sm;
+  height: $avatar-sm;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+}
+
+/**
+ * Avatar médio
+ * @example @include avatar-medium;
+ */
+@mixin avatar-medium {
+  width: $avatar-md;
+  height: $avatar-md;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+}
+
+/**
+ * Avatar grande
+ * @example @include avatar-large;
+ */
+@mixin avatar-large {
+  width: $avatar-lg;
+  height: $avatar-lg;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+}
+
+/**
+ * Avatar extra grande
+ * @example @include avatar-xl;
+ */
+@mixin avatar-xl {
+  width: $avatar-xl;
+  height: $avatar-xl;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+}
+
+/**
+ * Avatar extra extra grande
+ * @example @include avatar-xxl;
+ */
+@mixin avatar-xxl {
+  width: $avatar-xxl;
+  height: $avatar-xxl;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE ANIMAÇÕES
+// -----------------------------------------------------------------------------
+
+/**
+ * Efeito de hover com elevação
+ * @example @include hover-lift;
+ */
+@mixin hover-lift {
+  transform: translateY(-2px);
+  box-shadow: $shadow-lg;
+}
+
+/**
+ * Animação de fade in
+ * @example @include fade-in;
+ */
+@mixin fade-in {
+  animation: fadeIn $animation-duration-normal $animation-easing;
+}
+
+/**
+ * Spinner de loading
+ * @example @include spinner;
+ */
+@mixin spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid $neutral-200;
+  border-top: 4px solid $primary-color;
+  border-radius: $border-radius-circle;
+  animation: spin 1s linear infinite;
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS DE MODAIS E OVERLAYS
+// -----------------------------------------------------------------------------
+
+/**
+ * Overlay de modal
+ * @example @include modal-overlay;
+ */
+@mixin modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-index-modal;
+}
+
+/**
+ * Botão de fechar
+ * @example @include close-button;
+ */
+@mixin close-button {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: $white;
+  font-size: $font-size-xxl;
+  cursor: pointer;
+  padding: $spacing-xs;
+  transition: opacity $transition-base;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/**
+ * Botão de navegação
+ * @example @include nav-button;
+ */
+@mixin nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba($white, 0.2);
+  border: none;
+  color: $white;
+  font-size: $font-size-xxl;
+  padding: $spacing-md;
+  cursor: pointer;
+  border-radius: $border-radius-circle;
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba($white, 0.3);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// KEYFRAMES GLOBAIS
+// -----------------------------------------------------------------------------
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}

@@ -1,0 +1,119 @@
+<div class="gallery">
+    <div class="container">
+        <h1 class="page-title">Galeria de Momentos Especiais</h1>
+        <p class="page-subtitle">
+            Uma coleção organizada de fotos dos nossos queridos amigos, cada um com seus momentos únicos
+        </p>
+
+        <!-- Filtros por amigo -->
+        <div class="friend-filters">
+            <button
+                    class="filter-btn"
+                    [class.active]="selectedFriendId === 'all'"
+                    (click)="filterByFriend('all')"
+            >
+                Todos os Amigos
+            </button>
+            <button
+                    *ngFor="let friendGallery of friendGalleries"
+                    class="filter-btn"
+                    [class.active]="selectedFriendId === friendGallery.friend.id"
+                    [style.background-color]="friendGallery.friend.backgroundColor"
+                    [style.color]="friendGallery.friend.textColor"
+                    (click)="filterByFriend(friendGallery.friend.id)"
+            >
+                {{ friendGallery.friend.name }} ({{ friendGallery.images.length }})
+            </button>
+        </div>
+
+        <!-- Galeria organizada por amigo -->
+        <div class="friends-gallery" *ngIf="selectedFriendId === 'all'">
+            <div
+                    *ngFor="let friendGallery of friendGalleries; let i = index"
+                    class="friend-section"
+                    [style.animation-delay]="i * 0.2 + 's'"
+            >
+                <div class="friend-header" [style.background-color]="friendGallery.friend.backgroundColor">
+                    <img
+                            [src]="friendGallery.friend.photo"
+                            [alt]="friendGallery.friend.name"
+                            class="friend-avatar"
+                    >
+                    <div class="friend-info">
+                        <h2 [style.color]="friendGallery.friend.textColor">{{ friendGallery.friend.name }}</h2>
+                        <p [style.color]="friendGallery.friend.textColor">{{ friendGallery.images.length }} {{ friendGallery.images.length === 1 ? 'foto' : 'fotos' }}</p>
+                    </div>
+                </div>
+
+                <div class="friend-images">
+                    <div
+                            *ngFor="let image of friendGallery.images; let j = index"
+                            class="gallery-item"
+                            (click)="openLightbox(getImageIndex(image.id))"
+                            [style.animation-delay]="(i * 0.2 + j * 0.1) + 's'"
+                    >
+                        <img
+                                [src]="image.url"
+                                [alt]="image.alt"
+                                class="gallery-image"
+                                loading="lazy"
+                        >
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>{{ image.caption }}</h3>
+                                <p>Clique para ampliar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeria filtrada por amigo específico -->
+        <div class="filtered-gallery" *ngIf="selectedFriendId !== 'all'">
+            <div class="gallery-grid">
+                <div
+                        *ngFor="let image of filteredImages; let i = index"
+                        class="gallery-item"
+                        (click)="openLightbox(getImageIndex(image.id))"
+                        [style.animation-delay]="i * 0.1 + 's'"
+                >
+                    <img
+                            [src]="image.url"
+                            [alt]="image.alt"
+                            class="gallery-image"
+                            loading="lazy"
+                    >
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>{{ image.caption }}</h3>
+                            <p>Clique para ampliar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" *ngIf="selectedImageIndex !== null" (click)="closeLightbox()">
+        <div class="lightbox-content" (click)="$event.stopPropagation()">
+            <button class="close-btn" (click)="closeLightbox()">×</button>
+            <button class="nav-btn prev-btn" (click)="previousImage()" *ngIf="selectedImageIndex > 0">‹</button>
+            <button class="nav-btn next-btn" (click)="nextImage()" *ngIf="selectedImageIndex < allImages.length - 1">›
+            </button>
+
+            <img
+                    [src]="allImages[selectedImageIndex].url"
+                    [alt]="allImages[selectedImageIndex].alt"
+                    class="lightbox-image"
+            >
+
+            <div class="lightbox-caption">
+                <h3>{{ allImages[selectedImageIndex].caption }}</h3>
+                <p class="friend-tag">{{ allImages[selectedImageIndex].friendName }}</p>
+                <p>{{ selectedImageIndex + 1 }} de {{ allImages.length }}</p>
+            </div>
+        </div>
+    </div>
+</div>

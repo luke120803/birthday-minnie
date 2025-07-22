@@ -1,0 +1,37 @@
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>Feliz aniversário Minnie 🥳</h1>
+        </div>
+
+        <nav class="nav" [class.nav-open]="isMenuOpen">
+            <ul class="nav-list">
+                <li><a routerLink="/" (click)="closeMenu()">Início</a></li>
+                <li><a routerLink="/gallery" (click)="closeMenu()">Galeria</a></li>
+                <li><a routerLink="/countdown" (click)="closeMenu()">Countdown</a></li>
+                <li class="friends-dropdown">
+                    <span class="dropdown-toggle">Amigos ▼</span>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/friends/lokkas" (click)="closeMenu()">Lokkas</a></li>
+                        <li><a routerLink="/friends/moih" (click)="closeMenu()">Moih</a></li>
+                        <li><a routerLink="/friends/nicole" (click)="closeMenu()">Nicole</a></li>
+                        <li><a routerLink="/friends/paula" (click)="closeMenu()">Paula</a></li>
+                        <li><a routerLink="/friends/sophia" (click)="closeMenu()">Sophia</a></li>
+                        <li><a routerLink="/friends/pedro" (click)="closeMenu()">Pedro</a></li>
+                        <li><a routerLink="/friends/julia" (click)="closeMenu()">Julia</a></li>
+                        <li><a routerLink="/friends/thiago" (click)="closeMenu()">Thiago</a></li>
+                        <li><a routerLink="/friends/tirza" (click)="closeMenu()">Tirza</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'">
+                <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+                <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+                <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+            </button>
+        </div>
+    </div>
+</header>
