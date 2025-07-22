@@ -5,6 +5,7 @@ export interface Friend {
     backgroundColor: string;
     textColor: string;
     messages: MessageHistory[];
+    chibiImage?: string;
 }
 
 export interface MessageHistory {

@@ -12,7 +12,6 @@ export class AudioService {
     private currentBackgroundAudio: HTMLAudioElement | null = null;
     private soundEffects: { [key: string]: HTMLAudioElement } = {};
 
-    // Mapeamento de músicas de fundo por amigo
     private friendBackgroundMusic: { [key: string]: string } = {
         'lokkas': 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav',
         'moih': 'https://www.soundjay.com/misc/sounds/bell-ringing-04.wav',
