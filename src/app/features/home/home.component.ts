@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     'assets/images/minnie/minnie02.jpeg',
     'assets/images/minnie/minnie03.jpeg',
     'assets/images/minnie/minnie04.jpeg',
+    'assets/images/minnie/minnie05.jpeg',
   ];
   currentImageIndex = 0;
   private intervalId: any;

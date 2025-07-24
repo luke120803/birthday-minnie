@@ -109,12 +109,13 @@ export class DataService {
         {
             id: 'julia',
             name: 'Julia',
-            photo: 'assets/images/foto.julia.jpeg',
+            photo: 'assets/images/juh/foto.julia02.jpeg',
             messages: [
                 {year: 2024, text: 'Feliz vida minnie!!! Que o papai do céu derrame chuvas de bençãos sobre sua vida, você é uma menina maravilhosa, gentil, carismática, nunca deixe de ser assim! Agradeço a Deus por sua vida, e você faz parte da minha, você é uma luz (rosa) por onde passa, sua dança delicada encanta! Te amo muito Minnie, você é muito importante e especial pra mim, aprendo muito com você. Que essa data se repita por muitos anos, te amo menina das fitas 💕🦋'},
                 {
                     year: 2025,
-                    text: 'Querida Minnie, você é uma pessoa única e especial! Que seu aniversário seja repleto de momentos mágicos e muita felicidade! ✨'
+                    text: 'Feliz aniversário minnie! 🩰💓🪭\n' +
+                        'Só tenho a agradecer pela a sua vida, uma menina tão especial e gentil que ilumina o ambiente por onde passa! Eu te admiro muito, principalmente o seu esforço. Que você conquiste todos os seus sonhos, e que sua leveza na dança encante mais e mais pessoas. Continue sendo essa bondade em pessoa, e inspiração para várias minis bailarinas 🥹💓. Deus te abençoe sempre, amo fazer parte da sua vida, te amo linda flor! 💓🪭'
                 }
             ],
             backgroundColor: '#FFF0F5',
@@ -230,7 +231,7 @@ export class DataService {
         {
             id: 'v1',
             type: 'video',
-            url: 'assets/videos/minnie02.mp4',
+            url: 'assets/videos/minnie/minnie02.mp4',
             thumbnailUrl: 'assets/images/minnie-chibi-love.png',
             alt: 'Um vídeo especial da Minnie',
             caption: 'Memórias',
@@ -240,7 +241,7 @@ export class DataService {
         {
             id: 'v2',
             type: 'video',
-            url: 'assets/videos/minnie.mp4',
+            url: 'assets/videos/minnie/minnie.mp4',
             thumbnailUrl: 'assets/images/minnie-chibi-excited.png',
             alt: 'Um vídeo especial da Minnie',
             caption: 'Memórias',
@@ -304,7 +305,7 @@ export class DataService {
         {
             id: '14',
             type: 'image',
-            url: 'assets/images/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/juh/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Julia - Personalidade marcante',
             caption: 'Memórias',
             friendId: 'julia',
@@ -313,6 +314,26 @@ export class DataService {
         {
             id: '15',
             type: 'image',
+            url: 'assets/images/juh/foto.julia02.jpeg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Julia - Personalidade marcante',
+            caption: 'Memórias',
+            friendId: 'julia',
+            friendName: 'Julia'
+        },
+
+        {
+            id: 'v3',
+            type: 'video',
+            url: 'assets/videos/juh/juh.mp4',
+            thumbnailUrl: 'assets/images/minnie-chibi-excited.png',
+            alt: 'Memórias',
+            caption: 'Memórias',
+            friendId: 'julia',
+            friendName: 'Julia'
+        },
+        {
+            id: '16',
+            type: 'image',
             url: 'assets/images/foto.thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Thiago - Momento divertido',
             caption: 'Memórias',
@@ -320,7 +341,7 @@ export class DataService {
             friendName: 'Thiago'
         },
         {
-            id: '16',
+            id: '17',
             type: 'image',
             url: 'assets/images/foto.tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Tirza - Inspiração constante',
@@ -329,7 +350,7 @@ export class DataService {
             friendName: 'Tirza'
         },
         {
-            id: '17',
+            id: '18',
             type: 'image',
             url: 'teste',
             alt: 'teste',
