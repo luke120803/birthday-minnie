@@ -158,7 +158,7 @@
 
 @media (max-width: 768px) {
   .logo h1 {
-    font-size: 1.4rem;
+    font-size: 2rem; // AUMENTADO NOVAMENTE (para manter harmonia)
   }
 
   .nav {
@@ -182,23 +182,22 @@
 
   .nav-list {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3rem; // AUMENTADO NOVAMENTE
     text-align: center;
   }
 
   .nav-list a {
-    font-size: 1.6rem;
-    padding: 0.5rem 1rem;
+    font-size: 2rem; // AUMENTADO NOVAMENTE
+    padding: 1.2rem 1.5rem; // AUMENTADO NOVAMENTE
   }
 
-  // ATUALIZADO: Estilos para a seta do dropdown no mobile
   .dropdown-toggle {
-    font-size: 1.6rem;
-    padding: 0.5rem 1rem;
+    font-size: 2rem; // AUMENTADO NOVAMENTE
+    padding: 1.2rem 1.5rem; // AUMENTADO NOVAMENTE
 
     &::after {
       content: ' ▼';
-      font-size: 1rem;
+      font-size: 1.2rem; // AUMENTADO NOVAMENTE
       display: inline-block;
       transition: transform 0.3s ease;
     }
@@ -208,7 +207,6 @@
     transform: rotate(180deg);
   }
 
-  // ATUALIZADO: Lógica de animação do dropdown para mobile
   .dropdown-menu {
     position: static;
     max-height: 0;
@@ -218,29 +216,30 @@
     overflow: hidden;
     box-shadow: none;
     background: none;
-    margin-top: 1.5rem;
+    margin-top: 2rem; // AUMENTADO NOVAMENTE
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem; // AUMENTADO NOVAMENTE
     transition: max-height 0.4s ease-in-out, padding 0.3s ease;
   }
 
   .friends-dropdown.open .dropdown-menu {
     max-height: 500px;
-    padding: 1.5rem 0 0;
+    padding: 2rem 0 0; // AUMENTADO NOVAMENTE
   }
 
   .dropdown-menu a {
     background: none;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
   }
 
   .menu-toggle {
     display: flex;
     z-index: 1001;
-    padding: 1rem;
-    margin: -1rem;
+    padding: 1.4rem;
+    margin: -1.4rem;
   }
 
   .header-container {
