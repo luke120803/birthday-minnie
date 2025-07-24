@@ -130,7 +130,7 @@
     animation: fadeInUp 0.6s ease-out both;
 }
 
-.gallery-image {
+.gallery-media {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -141,8 +141,39 @@
     }
 }
 
-.gallery-item:hover .gallery-image {
+.gallery-item:hover img.gallery-media {
     transform: scale(1.05);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $black;
+}
+
+.video-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    background: rgba($black, 0.4);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 70px;
+    text-shadow: 0 0 10px rgba($black, 0.5);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .video-indicator {
+    opacity: 0.8;
 }
 
 .gallery-overlay {
@@ -177,18 +208,21 @@
 .lightbox {
     @include modal-overlay;
     animation: fadeIn 0.3s ease-out;
+    // Adicionado para conter o container da mídia
+    overflow: hidden;
 }
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%; // Ajustado para não cortar o conteúdo
+    max-width: 1200px; // Um máximo razoável
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.lightbox-image {
+.lightbox-media {
+    display: block; // Garante consistência
     max-width: 100%;
     max-height: 80vh;
     object-fit: contain;
@@ -234,7 +268,6 @@
     }
 }
 
-// Responsive Design
 @include mobile {
     .friend-header {
         padding: $spacing-lg;
@@ -262,20 +295,35 @@
         gap: $spacing-lg;
     }
 
-    .gallery-image {
-        height: 200px;
-    }
-
     .nav-btn {
         font-size: $font-size-lg;
         padding: $spacing-xs;
-
-        &.prev-btn {
-            left: -60px;
-        }
+        left: $spacing-sm;
 
         &.next-btn {
-            right: -60px;
+            right: $spacing-sm;
+            left: auto;
         }
+    }
+}
+
+
+// =======================================================
+// ESTILOS PARA A TRANSIÇÃO DE SLIDE DO LIGHTBOX
+// =======================================================
+
+.lightbox-media-container {
+    transition: transform 0.3s ease-in-out; // A duração da animação
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.slide-out-left {
+        transform: translateX(-120%); // Move para a esquerda e para fora da tela
+    }
+
+    &.slide-out-right {
+        transform: translateX(120%); // Move para a direita e para fora da tela
     }
 }

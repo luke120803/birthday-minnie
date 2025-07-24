@@ -18,9 +18,8 @@ export class CountdownComponent implements OnInit, OnDestroy {
     seconds: 0
   };
 
-  private intervalId: any;
+  private intervalId: number | undefined;
   private targetDate: Date;
-
   constructor() {
     const today = new Date();
     this.targetDate = new Date(today.getFullYear(), 6, 28);

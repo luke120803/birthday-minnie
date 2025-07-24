@@ -9,8 +9,8 @@
                 <li><a routerLink="/" (click)="closeMenu()">Início</a></li>
                 <li><a routerLink="/gallery" (click)="closeMenu()">Galeria</a></li>
                 <li><a routerLink="/countdown" (click)="closeMenu()">Countdown</a></li>
-                <li class="friends-dropdown">
-                    <span class="dropdown-toggle">Amigos ▼</span>
+                <li class="friends-dropdown" [class.open]="isDropdownOpen">
+                    <span class="dropdown-toggle" (click)="toggleDropdown($event)">Amigos ▼</span>
                     <ul class="dropdown-menu">
                         <li><a routerLink="/friends/lokkas" (click)="closeMenu()">Lokkas</a></li>
                         <li><a routerLink="/friends/moih" (click)="closeMenu()">Moih</a></li>

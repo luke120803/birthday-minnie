@@ -5,11 +5,17 @@
             <p class="hero-subtitle animate-fade-in-delay">
                 Um site especial criado com muito carinho pelos seus amigos
             </p>
-            <img
-                    src="assets/images/foto.home.jpeg"
-                    alt="Foto especial da Minnie"
-                    class="hero-image animate-scale-in"
-            />
+
+            <div class="hero-image-container">
+                @for (image of heroImages; track image; let i = $index) {
+                    <img
+                            [src]="image"
+                            alt="Foto especial da Minnie {{ i + 1 }}"
+                            class="hero-image"
+                            [class.active]="i === currentImageIndex"
+                    />
+                }
+            </div>
         </div>
     </section>
 
@@ -36,17 +42,19 @@
         <div class="container">
             <h2 class="section-title">Mensagens dos Amigos</h2>
             <div class="friends-grid">
-                <div
-                        *ngFor="let friend of friends"
-                        class="friend-card"
-                        [style.background-color]="friend.backgroundColor"
-                        [style.color]="friend.textColor"
-                        [routerLink]="['/friends', friend.id]"
-                >
-                    <img [src]="friend.photo" [alt]="friend.name" class="friend-photo">
-                    <h3>{{ friend.name }}</h3>
-                    <p class="friend-preview">{{ getPreviewMessage(friend.messages) }}</p>                    <span class="read-more">Ler mensagem completa →</span>
-                </div>
+                @for (friend of friends; track friend.id) {
+                    <div
+                            class="friend-card"
+                            [style.background-color]="friend.backgroundColor"
+                            [style.color]="friend.textColor"
+                            [routerLink]="['/friends', friend.id]"
+                    >
+                        <img [src]="friend.photo" [alt]="friend.name" class="friend-photo">
+                        <h3>{{ friend.name }}</h3>
+                        <p class="friend-preview">{{ getPreviewMessage(friend.messages) }}</p>
+                        <span class="read-more">Ler mensagem completa →</span>
+                    </div>
+                }
             </div>
         </div>
     </section>

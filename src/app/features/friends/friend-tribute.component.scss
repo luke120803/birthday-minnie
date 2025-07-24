@@ -192,10 +192,21 @@
   right: 25px;
   width: 120px;
   height: auto;
-  z-index: 1000;
+  z-index: 10;
+  opacity: 0.8;
+  pointer-events: none; // Impede que a imagem seja clicável
   transition: transform 0.3s ease-in-out;
   filter: drop-shadow(0 4px 8px rgba($black, 0.25));
   animation: bounce-in 1s ease-out 0.5s both;
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: 20px;
+    transform: scaleX(-1);
+  }
 
   &:hover {
     transform: scale(1.1);
@@ -246,6 +257,47 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.chibi-decoration {
+  // --- POSIÇÃO ---
+  // Define que a imagem ficará fixa na tela, mesmo com o scroll.
+  position: fixed;
+  // Distância do fundo da tela. Mude para 'top: 20px;' se preferir no topo.
+  bottom: 20px;
+  // Garante que a imagem fique acima de outros conteúdos.
+  z-index: 10;
+
+  // --- TAMANHO ---
+  // Altere o valor para aumentar ou diminuir o tamanho da imagem.
+  width: 120px;
+  // Mantém a proporção da imagem automaticamente.
+  height: auto;
+
+  // --- APARÊNCIA ---
+  // Controle a transparência. (0 = invisível, 1 = totalmente opaco).
+  opacity: 0.8;
+  // Faz com que a imagem não seja clicável, sendo puramente decorativa.
+  pointer-events: none;
+
+  // --- AJUSTES DE CADA LADO ---
+  &.left {
+    // Distância da borda esquerda.
+    left: 20px;
+  }
+
+  &.right {
+    // Distância da borda direita.
+    right: 20px;
+    // Inverte a imagem horizontalmente (efeito de espelho).
+    // Remova a linha abaixo se não quiser inverter.
+  }
+}
+
+@include mobile {
+  .chibi-decoration {
+    display: none;
   }
 }
 

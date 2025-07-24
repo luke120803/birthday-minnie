@@ -30,17 +30,42 @@
     font-weight: 300;
 }
 
-.hero-image {
+// =======================================================
+// INÍCIO DOS ESTILOS ATUALIZADOS PARA O CARROSSEL
+// =======================================================
+
+.hero-image-container {
+    position: relative;
     width: 100%;
     max-width: 500px;
+    // A altura deve corresponder à largura máxima para um quadrado, ou ajuste conforme necessário.
+    // Usar 'aspect-ratio' é uma abordagem moderna para manter a proporção.
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.hero-image:hover {
-    transform: scale(1.05);
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Preenche o espaço sem distorcer a imagem.
+    opacity: 0;
+    transition: opacity 1s ease-in-out; // Animação suave de fade.
+
+    // A imagem ativa fica visível
+    &.active {
+        opacity: 1;
+    }
 }
+
+// =======================================================
+// FIM DOS ESTILOS ATUALIZADOS PARA O CARROSSEL
+// =======================================================
 
 .container {
     max-width: 1200px;
@@ -208,22 +233,44 @@
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .friends-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-link {
+        padding: 2.5rem 2rem;
+    }
+
+    .quick-link h3 {
+        font-size: 1.6rem;
+    }
+
+    .quick-link p {
+        font-size: 1rem;
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
     }
 }

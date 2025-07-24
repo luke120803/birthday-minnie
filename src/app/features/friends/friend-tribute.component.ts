@@ -2,7 +2,6 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ActivatedRoute, Router, RouterModule} from '@angular/router';
 import {DataService} from '../../shared/services/data.service';
-import {AudioService} from '../../shared/services/audio.service';
 import {Friend, MessageHistory} from '../../shared/interfaces/friend.interface';
 
 /**
@@ -33,7 +32,6 @@ export class FriendTributeComponent implements OnInit, OnDestroy {
         private route: ActivatedRoute,
         private router: Router,
         private dataService: DataService,
-        private audioService: AudioService
     ) {
     }
 
@@ -47,7 +45,6 @@ export class FriendTributeComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this.audioService.stopCurrentBackgroundMusic();
     }
 
     private loadFriend(): void {

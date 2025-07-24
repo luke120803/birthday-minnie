@@ -97,7 +97,8 @@
   padding: 0.5rem 0;
 }
 
-.friends-dropdown:hover .dropdown-menu {
+// ATUALIZADO: Troca o :hover por uma classe .open para funcionar com clique
+.friends-dropdown.open .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -181,35 +182,68 @@
 
   .nav-list {
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     text-align: center;
   }
 
   .nav-list a {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
   }
 
+  // ATUALIZADO: Estilos para a seta do dropdown no mobile
+  .dropdown-toggle {
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+
+    &::after {
+      content: ' ▼';
+      font-size: 1rem;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .friends-dropdown.open .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  // ATUALIZADO: Lógica de animação do dropdown para mobile
   .dropdown-menu {
     position: static;
+    max-height: 0;
     opacity: 1;
     visibility: visible;
     transform: none;
+    overflow: hidden;
     box-shadow: none;
     background: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+  }
+
+  .friends-dropdown.open .dropdown-menu {
+    max-height: 500px;
+    padding: 1.5rem 0 0;
   }
 
   .dropdown-menu a {
     background: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .menu-toggle {
     display: flex;
     z-index: 1001;
+    padding: 1rem;
+    margin: -1rem;
   }
 
   .header-container {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }

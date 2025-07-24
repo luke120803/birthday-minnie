@@ -1,7 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DataService} from '../../shared/services/data.service';
-import {AudioService} from '../../shared/services/audio.service';
 import {GalleryImage, Friend} from '../../shared/interfaces/friend.interface';
 
 /**
@@ -29,15 +28,21 @@ export class GalleryComponent implements OnInit, OnDestroy {
     filteredImages: GalleryImage[] = [];
     friendGalleries: FriendGallery[] = [];
 
+    // Propriedades para o swipe no lightbox
+    touchStartX = 0;
+    touchEndX = 0;
+
     // Propriedades do lightbox
     selectedImageIndex: number | null = null;
 
     // Propriedades de filtro
     selectedFriendId: string = 'all';
 
+    public slideDirection: 'left' | 'right' | null = null; // Controla a animação
+
+
     constructor(
         private dataService: DataService,
-        private audioService: AudioService
     ) {
     }
 
@@ -46,7 +51,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this.audioService.stopCurrentBackgroundMusic();
+
     }
 
     /**
@@ -108,16 +113,29 @@ export class GalleryComponent implements OnInit, OnDestroy {
      */
     nextImage(): void {
         if (this.selectedImageIndex !== null && this.selectedImageIndex < this.allImages.length - 1) {
-            this.selectedImageIndex++;
+            this.slideDirection = 'left';
+            setTimeout(() => {
+
+                if (this.selectedImageIndex !== null) {
+                    this.selectedImageIndex++;
+                }
+                this.slideDirection = null;
+            }, 300);
         }
     }
 
     /**
-     * Navega para imagem anterior no lightbox
+     * Navega para a imagem anterior no lightbox
      */
     previousImage(): void {
         if (this.selectedImageIndex !== null && this.selectedImageIndex > 0) {
-            this.selectedImageIndex--;
+            this.slideDirection = 'right';
+            setTimeout(() => {
+                if (this.selectedImageIndex !== null) {
+                    this.selectedImageIndex--;
+                }
+                this.slideDirection = null;
+            }, 300);
         }
     }
 
@@ -128,5 +146,39 @@ export class GalleryComponent implements OnInit, OnDestroy {
      */
     getImageIndex(imageId: string): number {
         return this.allImages.findIndex(img => img.id === imageId);
+    }
+
+    /**
+     * Captura a posição inicial do toque na tela.
+     * @param event Evento de toque
+     */
+    handleTouchStart(event: TouchEvent): void {
+        this.touchStartX = event.changedTouches[0].screenX;
+    }
+
+    /**
+     * Captura a posição final do toque e decide a ação.
+     * @param event Evento de toque
+     */
+    handleTouchEnd(event: TouchEvent): void {
+        this.touchEndX = event.changedTouches[0].screenX;
+        this.handleSwipeGesture();
+    }
+
+    /**
+     * Verifica a direção do swipe e navega para a imagem correspondente.
+     */
+    handleSwipeGesture(): void {
+        const swipeThreshold = 50; // Mínimo de pixels para considerar um swipe
+
+        // Swipe para a esquerda (próxima imagem)
+        if (this.touchEndX < this.touchStartX - swipeThreshold) {
+            this.nextImage();
+        }
+
+        // Swipe para a direita (imagem anterior)
+        if (this.touchEndX > this.touchStartX + swipeThreshold) {
+            this.previousImage();
+        }
     }
 }

@@ -22,9 +22,11 @@ export interface CountdownTime {
 
 export interface GalleryImage {
     id: string;
+    type: 'image' | 'video';
     url: string;
+    thumbnailUrl?: string;
     alt: string;
-    caption?: string;
+    caption: string;
     friendId: string;
     friendName: string;
 }

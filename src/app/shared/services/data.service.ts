@@ -29,8 +29,6 @@ export class DataService {
             ],
             backgroundColor: '#FFE4E1',
             textColor: '#8B4513',
-            chibiImage: 'assets/images/minnie-chibi-love.png'
-
         },
         {
             id: 'moih',
@@ -45,8 +43,6 @@ export class DataService {
             ],
             backgroundColor: '#E6E6FA',
             textColor: '#4B0082',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'nicole',
@@ -61,8 +57,6 @@ export class DataService {
             ],
             backgroundColor: '#F0F8FF',
             textColor: '#191970',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'paula',
@@ -77,8 +71,6 @@ export class DataService {
             ],
             backgroundColor: '#FFF8DC',
             textColor: '#B8860B',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'sophia',
@@ -93,8 +85,6 @@ export class DataService {
             ],
             backgroundColor: '#F5F5DC',
             textColor: '#8B4513',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'pedro',
@@ -115,8 +105,6 @@ export class DataService {
             ],
             backgroundColor: '#E0FFFF',
             textColor: '#008B8B',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'julia',
@@ -131,8 +119,6 @@ export class DataService {
             ],
             backgroundColor: '#FFF0F5',
             textColor: '#C71585',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
-
         },
         {
             id: 'thiago',
@@ -153,7 +139,6 @@ export class DataService {
             ],
             backgroundColor: '#F0FFFF',
             textColor: '#2F4F4F',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
 
         },
         {
@@ -169,7 +154,6 @@ export class DataService {
             ],
             backgroundColor: '#FFFACD',
             textColor: '#8B4513',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
 
         },
         {
@@ -185,144 +169,171 @@ export class DataService {
             ],
             backgroundColor: '#F0FFFF',
             textColor: '#2F4F4F',
-            chibiImage: 'assets/images/minnie-chibi-excited.png'
         },
     ];
 
     private galleryImages: GalleryImage[] = [
         {
-            id: '1',
-            url: 'assets/images/lucas/foto.lucas.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
-        },
-        {
             id: '2',
+            type: 'image',
             url: 'assets/images/lucas/foto.lucas02.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '3',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
+            type: 'image',
+            url: 'assets/images/lucas/foto.lucas03.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '4',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
+            type: 'image',
+            url: 'assets/images/lucas/foto.lucas04.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '5',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
+            type: 'image',
+            url: 'assets/images/lucas/foto.lucas05.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '6',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
+            type: 'image',
+            url: 'assets/images/lucas/foto.lucas06.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '7',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
+            type: 'image',
+            url: 'assets/images/lucas/foto.lucas07.jpeg',
             alt: 'Lucas - Foto pessoal',
-            caption: 'Lucas em um momento especial',
+            caption: 'Memórias',
+            friendId: 'lokkas',
+            friendName: 'Lokkas'
+        },
+        {
+            id: 'v1',
+            type: 'video',
+            url: 'assets/videos/minnie02.mp4',
+            thumbnailUrl: 'assets/images/minnie-chibi-love.png',
+            alt: 'Um vídeo especial da Minnie',
+            caption: 'Memórias',
+            friendId: 'lokkas',
+            friendName: 'Lokkas'
+        },
+        {
+            id: 'v2',
+            type: 'video',
+            url: 'assets/videos/minnie.mp4',
+            thumbnailUrl: 'assets/images/minnie-chibi-excited.png',
+            alt: 'Um vídeo especial da Minnie',
+            caption: 'Memórias',
             friendId: 'lokkas',
             friendName: 'Lokkas'
         },
         {
             id: '8',
+            type: 'image',
             url: 'assets/images/foto.moih.jpeg',
             alt: 'Moih - Foto pessoal',
-            caption: 'Moih em um momento descontraído',
+            caption: 'Memórias',
             friendId: 'moih',
             friendName: 'Moih'
         },
         {
             id: '9',
+            type: 'image',
             url: 'assets/images/foto.nicole.jpeg',
             alt: 'Nicole - Foto pessoal',
-            caption: 'Nicole sorrindo',
+            caption: 'Memórias',
             friendId: 'nicole',
             friendName: 'Nicole'
         },
         {
             id: '10',
+            type: 'image',
             url: 'assets/images/foto.nicole2.jpeg',
             alt: 'Nicole - Segunda foto pessoal',
-            caption: 'Nicole em outro momento especial',
+            caption: 'Memórias',
             friendId: 'nicole',
             friendName: 'Nicole'
         },
         {
             id: '11',
+            type: 'image',
             url: 'assets/images/foto.paula.jpeg',
             alt: 'Paula - Energia positiva',
-            caption: 'Paula irradiando energia positiva',
+            caption: 'Memórias',
             friendId: 'paula',
             friendName: 'Paula'
         },
         {
             id: '12',
+            type: 'image',
             url: 'assets/images/foto.sophia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Sophia - Elegância natural',
-            caption: 'Sophia com sua elegância natural',
+            caption: 'Memórias',
             friendId: 'sophia',
             friendName: 'Sophia'
         },
         {
             id: '13',
+            type: 'image',
             url: 'assets/images/foto.pedro.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Pedro - Carisma único',
-            caption: 'Pedro com seu carisma único',
+            caption: 'Memórias',
             friendId: 'pedro',
             friendName: 'Pedro'
         },
         {
             id: '14',
+            type: 'image',
             url: 'assets/images/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Julia - Personalidade marcante',
-            caption: 'Julia com sua personalidade marcante',
+            caption: 'Memórias',
             friendId: 'julia',
             friendName: 'Julia'
         },
         {
             id: '15',
+            type: 'image',
             url: 'assets/images/foto.thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Thiago - Momento divertido',
-            caption: 'Thiago em um momento divertido',
+            caption: 'Memórias',
             friendId: 'thiago',
             friendName: 'Thiago'
         },
         {
             id: '16',
+            type: 'image',
             url: 'assets/images/foto.tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Tirza - Inspiração constante',
-            caption: 'Tirza sendo uma inspiração',
+            caption: 'Memórias',
             friendId: 'tirza',
             friendName: 'Tirza'
         },
         {
             id: '17',
+            type: 'image',
             url: 'teste',
             alt: 'teste',
-            caption: 'teste',
+            caption: 'Memórias',
             friendId: 'luiza',
             friendName: 'Ana Luiza'
         },
