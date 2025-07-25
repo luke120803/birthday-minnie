@@ -16,10 +16,11 @@
                           role="button"
                           tabindex="0">Amigos ▼</span>
                     <ul class="dropdown-menu">
+                        <li><a routerLink="/friends/analuiza" (click)="closeMenu()">Ana Luiza</a></li>
                         <li><a routerLink="/friends/eduarda" (click)="closeMenu()">Eduarda</a></li>
                         <li><a routerLink="/friends/julia" (click)="closeMenu()">Julia</a></li>
                         <li><a routerLink="/friends/lokkas" (click)="closeMenu()">Lokkas</a></li>
-                        <li><a routerLink="/friends/luiza" (click)="closeMenu()">Ana Luiza</a></li>
+                        <li><a routerLink="/friends/luiza" (click)="closeMenu()">Luiza</a></li>
                         <li><a routerLink="/friends/moih" (click)="closeMenu()">Moih</a></li>
                         <li><a routerLink="/friends/nicole" (click)="closeMenu()">Nicole</a></li>
                         <li><a routerLink="/friends/pedro" (click)="closeMenu()">Pedro</a></li>
@@ -34,7 +35,8 @@
         </nav>
 
         <div class="header-actions">
-            <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'">
+            <button class="menu-toggle" (click)="toggleMenu()"
+                    [attr.aria-label]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'">
                 <span class="hamburger-line" [class.active]="isMenuOpen"></span>
                 <span class="hamburger-line" [class.active]="isMenuOpen"></span>
                 <span class="hamburger-line" [class.active]="isMenuOpen"></span>

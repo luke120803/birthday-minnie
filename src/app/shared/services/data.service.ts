@@ -197,14 +197,19 @@ export class DataService {
 
         },
         {
-            id: 'luiza',
+            id: 'analuiza',
             name: 'Ana Luiza',
-            photo: 'assets/images/luiza/luiza02.jpg',
+            photo: 'assets/images/analuiza/analu02.jpg',
             messages: [
                 {year: 2024, text: ''},
                 {
                     year: 2025,
-                    text: ''
+                    text: 'FELIZ ANIVERSÁRIO para minha linda e incrível melhor amiga! 😘\n' +
+                        'Espero que você tenha o melhor dia de todos, cheio de alegria, surpresas boas, abraços apertados e muito amor. Estou tão feliz que Deus trouxe você para a minha vida - você é como a irmã que eu nunca tive, mas que sempre sonhei em ter. 💖\n' +
+                        'Você mudou a minha vida de uma forma que eu nunca imaginei. Com o seu jeito único, sua risada contagiante, seus conselhos sinceros e seu coração gigante, você trouxe luz para os meus dias mais escuros e fez os bons momentos se tornarem inesquecíveis.\n' +
+                        'Obrigada por estar sempre ao meu lado, por me entender até no silêncio, por rir comigo até da coisa mais boba e por me apoiar mesmo quando eu mesma duvidava de mim. Você é um presente raro e precioso, daqueles que a gente tem que cuidar com muito carinho. 🎁\n' +
+                        'Que neste novo ciclo você continue brilhando, conquistando seus sonhos, cercada por pessoas que te amam de verdade e sendo essa pessoa maravilhosa.\n' +
+                        'Te amo demais e desejo do fundo do coração que seu aniversário seja tão especial quanto você é para mim. 💐💖'
                 }
             ],
             backgroundColor: '#F0FFFF',
@@ -261,6 +266,22 @@ export class DataService {
             ],
             backgroundColor: '#F0F8FF',
             textColor: '#191970',
+        },
+        {
+            id: 'luiza',
+            name: 'Luiza',
+            photo: 'assets/images/luiza/luiza.jpg',
+            messages: [
+                {year: 2024,
+                    text: ''}
+                ,
+                {
+                    year: 2025,
+                    text: 'Feliz aniversário Yasmim, saiba q eu amo muito vc, em pouco tempo vc se tornou uma das pessoas mais importantes da minha vida, me arrisco a dizer q quem tem sua amizade tem tudo, sempre companheira, inteligente, alegre, esforçada, , vc é um jóia q nenhuma outra se compara, q vc possa conquistar assim, q vc conquiste todos os seus objetivos, seus sonhos , q Deus possa abençoar sua vida acima de tudo, sempre estarei aq para quando precisar, sempre torcerei pelas suas vitórias, sempre estarei torcendo pelo seu melhor, se eu pudesse definir vc em uma palavra seria "** Carismática **", quero q nossa amizade possa seguir durante anos e anos das nossas vidas, foi uma dádiva conhecer vc, eu tenho vc no meu coração e para vida , amo vc e vou amar nossa amizade com todo respeito, carinho, me arrisco a dizer q vc e a Luiza são minhas almas gêmeas na amizade, tanto quando o Vitor tbm, amo vcs , qr q essa data, o dia do seu aniversário seja lembrado durante anos, e q possamos comemorar durante anos🤍'
+                }
+            ],
+            backgroundColor: '#F0FFFF',
+            textColor: '#2F4F4F',
         },
 
     ];
@@ -324,7 +345,7 @@ export class DataService {
             id: 'v1',
             type: 'video',
             url: 'assets/videos/minnie/minnie02.mp4',
-            thumbnailUrl: 'assets/images/minnie-chibi-love.png',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-love.png',
             alt: 'Um vídeo especial da Minnie',
             caption: 'Memórias',
             friendId: 'lokkas',
@@ -334,7 +355,7 @@ export class DataService {
             id: 'v2',
             type: 'video',
             url: 'assets/videos/minnie/minnie.mp4',
-            thumbnailUrl: 'assets/images/minnie-chibi-excited.png',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png',
             alt: 'Um vídeo especial da Minnie',
             caption: 'Memórias',
             friendId: 'lokkas',
@@ -427,7 +448,7 @@ export class DataService {
             id: 'v3',
             type: 'video',
             url: 'assets/videos/juh/juh.mp4',
-            thumbnailUrl: 'assets/images/minnie-chibi-excited.png',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png',
             alt: 'Memórias',
             caption: 'Memórias',
             friendId: 'julia',
@@ -522,15 +543,6 @@ export class DataService {
             caption: 'Memórias',
             friendId: 'thiago',
             friendName: 'Thiago'
-        },
-        {
-            id: '26',
-            type: 'image',
-            url: 'assets/images/tirza/foto.tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
         },
         {
             id: '27',
@@ -670,10 +682,10 @@ export class DataService {
         {
             id: '42',
             type: 'image',
-            url: 'assets/images/luiza/luiza02.jpg?auto=compress&cs=tinysrgb&w=600',
+            url: 'assets/images/analuiza/analu.jpg?auto=compress&cs=tinysrgb&w=600',
             alt: 'Luiza - Elegância natural',
             caption: 'Memórias',
-            friendId: 'luiza',
+            friendId: 'analuiza',
             friendName: 'Luiza'
         },
         {
@@ -702,6 +714,60 @@ export class DataService {
             caption: 'Memórias',
             friendId: 'eduarda',
             friendName: 'Eduarda'
+        },
+        {
+            id: '46',
+            type: 'image',
+            url: 'assets/images/analuiza/analu02.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
+        },
+        {
+            id: '47',
+            type: 'image',
+            url: 'assets/images/analuiza/analu03.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
+        },
+        {
+            id: '48',
+            type: 'image',
+            url: 'assets/images/analuiza/analu04.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
+        },
+        {
+            id: '49',
+            type: 'image',
+            url: 'assets/images/analuiza/analu05.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
+        },
+        {
+            id: '50',
+            type: 'image',
+            url: 'assets/images/analuiza/analu06.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
+        },
+        {
+            id: '51',
+            type: 'image',
+            url: 'assets/images/analuiza/analu07.jpg?auto=compress&cs=tinysrgb&w=600',
+            alt: 'Luiza - Elegância natural',
+            caption: 'Memórias',
+            friendId: 'analuiza',
+            friendName: 'Luiza'
         },
     ];
 

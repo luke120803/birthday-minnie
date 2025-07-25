@@ -1,5 +1,5 @@
 import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ActivatedRoute, Router, RouterModule} from '@angular/router';
 import {DataService} from '../../shared/services/data.service';
 import {Friend, MessageHistory} from '../../shared/interfaces/friend.interface';
@@ -11,7 +11,7 @@ import {Friend, MessageHistory} from '../../shared/interfaces/friend.interface';
 @Component({
     selector: 'app-friend-tribute',
     standalone: true,
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, NgOptimizedImage],
     templateUrl: './friend-tribute.component.html',
     styleUrls: ['./friend-tribute.component.scss']
 })
