@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'; // Adicione OnDestroy
+import {Component, OnInit, OnDestroy, inject} from '@angular/core'; // Adicione OnDestroy
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DataService } from '../../shared/services/data.service';
@@ -13,9 +13,9 @@ import { Friend } from '../../shared/interfaces/friend.interface';
 })
 // Implemente OnDestroy para limpar o intervalo quando o componente for destruído
 export class HomeComponent implements OnInit, OnDestroy {
+  private dataService = inject(DataService); // Injete o serviço aqui
   friends: Friend[] = [];
 
-  // --- INÍCIO DAS NOVAS PROPRIEDADES PARA O CARROSSEL ---
   heroImages: string[] = [
     'assets/images/minnie/foto.minnie.jpeg',
     'assets/images/minnie/minnie-gatinha.jpeg',
@@ -25,9 +25,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     'assets/images/minnie/minnie05.jpeg',
   ];
   currentImageIndex = 0;
-  private intervalId: any;
+  private intervalId: number | undefined;
 
-  constructor(private dataService: DataService) {}
+  constructor() {}
 
   ngOnInit() {
     this.dataService.getFriends().subscribe(friends => {

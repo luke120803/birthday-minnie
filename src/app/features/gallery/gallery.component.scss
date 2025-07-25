@@ -91,13 +91,11 @@
 }
 
 .play-music-btn {
-  @include button-circle;
+  @include button-circle(3.25rem);
   position: absolute;
   right: $spacing-lg;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
   color: $white;
   font-size: $font-size-lg;
 
@@ -130,11 +128,8 @@
   animation: fadeInUp 0.6s ease-out both;
 }
 
-// =======================================================
-// INÍCIO DAS ALTERAÇÕES PARA SUPORTE A VÍDEO
-// =======================================================
+// ===================== SUPORTE A VÍDEO =====================
 
-// Classe genérica para FOTOS e VÍDEOS na grade
 .gallery-media {
   width: 100%;
   height: 200px;
@@ -146,20 +141,17 @@
   }
 }
 
-// Efeito de zoom no hover apenas para imagens
 .gallery-item:hover img.gallery-media {
   transform: scale(1.05);
 }
 
-// Container para o vídeo na grade (necessário para o ícone de play)
 .video-container {
   position: relative;
   width: 100%;
   height: 100%;
-  background: $black; // Fundo preto para o caso do poster não carregar
+  background: $black;
 }
 
-// Ícone de "play" sobre os vídeos na grade
 .video-indicator {
   position: absolute;
   top: 50%;
@@ -174,7 +166,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 70px; // Alinha o ícone verticalmente
+  line-height: 70px;
   text-shadow: 0 0 10px rgba($black, 0.5);
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -184,7 +176,6 @@
   opacity: 0.8;
 }
 
-// Classe genérica para FOTOS e VÍDEOS no lightbox
 .lightbox-media {
   max-width: 100%;
   max-height: 80vh;
@@ -193,9 +184,7 @@
   box-shadow: $shadow-xl;
 }
 
-// =======================================================
-// FIM DAS ALTERAÇÕES PARA SUPORTE A VÍDEO
-// =======================================================
+// ===================== OVERLAY =====================
 
 .gallery-overlay {
   position: absolute;
@@ -226,9 +215,12 @@
   }
 }
 
+// ===================== LIGHTBOX =====================
+
 .lightbox {
   @include modal-overlay;
   animation: fadeIn 0.3s ease-out;
+  overflow: hidden;
 }
 
 .lightbox-content {
@@ -278,7 +270,8 @@
   }
 }
 
-// Responsive Design
+// ===================== RESPONSIVO =====================
+
 @include mobile {
   .friend-header {
     padding: $spacing-lg;
@@ -294,23 +287,27 @@
     position: static;
     transform: none;
     margin-top: $spacing-md;
+    @include button-circle(3.75rem);
   }
 
-  .friend-images {
+  .friend-images,
+  .gallery-grid {
     grid-template-columns: 1fr;
+    gap: $spacing-md;
     padding: 0 $spacing-md $spacing-lg;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: $spacing-lg;
+  .filter-btn {
+    font-size: $font-size-base;
+    padding: $spacing-sm $spacing-md;
+    width: 100%;
+    max-width: 90vw;
   }
 
   .nav-btn {
     font-size: $font-size-lg;
     padding: $spacing-xs;
 
-    // Ajuste para botões de navegação ficarem mais próximos em mobile
     &.prev-btn {
       left: $spacing-sm;
     }
@@ -319,38 +316,25 @@
       right: $spacing-sm;
     }
   }
+
+  .gallery-media {
+    height: 180px !important;
+  }
 }
 
-// =======================================================
-// ESTILOS PARA A TRANSIÇÃO DE SLIDE DO LIGHTBOX
-// =======================================================
+// ===================== TRANSIÇÃO DE SLIDE =====================
 
-.lightbox {
-  // Adicionado para evitar que a imagem "vaze" durante a animação de slide
-  overflow: hidden;
-}
-
-.lightbox-content {
-  // Ajustado para não cortar a imagem durante a animação
-  width: 90%;
-  max-width: 1200px;
-}
-
-// Container que envolve a imagem/vídeo para aplicar a animação
 .lightbox-media-container {
-  // A transição de 0.3s deve corresponder ao setTimeout no seu ficheiro .ts
   transition: transform 0.3s ease-in-out;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  // Classe aplicada para animar a saída para a esquerda
   &.slide-out-left {
     transform: translateX(-120%);
   }
 
-  // Classe aplicada para animar a saída para a direita
   &.slide-out-right {
     transform: translateX(120%);
   }

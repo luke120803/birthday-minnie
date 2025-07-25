@@ -1,7 +1,7 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DataService} from '../../shared/services/data.service';
-import {GalleryImage, Friend} from '../../shared/interfaces/friend.interface';
+import {Friend, GalleryImage} from '../../shared/interfaces/friend.interface';
 
 /**
  * Interface para organizar galeria por amigo
@@ -22,7 +22,7 @@ interface FriendGallery {
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit, OnDestroy {
+export class GalleryComponent implements OnInit {
     // Propriedades da galeria
     allImages: GalleryImage[] = [];
     filteredImages: GalleryImage[] = [];
@@ -35,10 +35,9 @@ export class GalleryComponent implements OnInit, OnDestroy {
     // Propriedades do lightbox
     selectedImageIndex: number | null = null;
 
-    // Propriedades de filtro
-    selectedFriendId: string = 'all';
+    selectedFriendId = 'all';
 
-    public slideDirection: 'left' | 'right' | null = null; // Controla a animação
+    public slideDirection: 'left' | 'right' | null = null;
 
 
     constructor(

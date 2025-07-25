@@ -190,11 +190,18 @@
  * Botão circular
  * @example @include button-circle;
  */
-@mixin button-circle {
-  @include button-base;
-  border-radius: $border-radius-circle;
+@mixin button-circle($size: 3rem) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  aspect-ratio: 1;
+  line-height: 1;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 // -----------------------------------------------------------------------------
@@ -230,10 +237,6 @@
 // MIXINS DE AVATARES
 // -----------------------------------------------------------------------------
 
-/**
- * Avatar pequeno
- * @example @include avatar-small;
- */
 @mixin avatar-small {
   width: $avatar-sm;
   height: $avatar-sm;
@@ -241,10 +244,6 @@
   object-fit: cover;
 }
 
-/**
- * Avatar médio
- * @example @include avatar-medium;
- */
 @mixin avatar-medium {
   width: $avatar-md;
   height: $avatar-md;
@@ -252,10 +251,6 @@
   object-fit: cover;
 }
 
-/**
- * Avatar grande
- * @example @include avatar-large;
- */
 @mixin avatar-large {
   width: $avatar-lg;
   height: $avatar-lg;
@@ -263,10 +258,6 @@
   object-fit: cover;
 }
 
-/**
- * Avatar extra grande
- * @example @include avatar-xl;
- */
 @mixin avatar-xl {
   width: $avatar-xl;
   height: $avatar-xl;
@@ -274,10 +265,6 @@
   object-fit: cover;
 }
 
-/**
- * Avatar extra extra grande
- * @example @include avatar-xxl;
- */
 @mixin avatar-xxl {
   width: $avatar-xxl;
   height: $avatar-xxl;
@@ -289,27 +276,15 @@
 // MIXINS DE ANIMAÇÕES
 // -----------------------------------------------------------------------------
 
-/**
- * Efeito de hover com elevação
- * @example @include hover-lift;
- */
 @mixin hover-lift {
   transform: translateY(-2px);
   box-shadow: $shadow-lg;
 }
 
-/**
- * Animação de fade in
- * @example @include fade-in;
- */
 @mixin fade-in {
   animation: fadeIn $animation-duration-normal $animation-easing;
 }
 
-/**
- * Spinner de loading
- * @example @include spinner;
- */
 @mixin spinner {
   width: 40px;
   height: 40px;
@@ -323,10 +298,6 @@
 // MIXINS DE MODAIS E OVERLAYS
 // -----------------------------------------------------------------------------
 
-/**
- * Overlay de modal
- * @example @include modal-overlay;
- */
 @mixin modal-overlay {
   position: fixed;
   top: 0;
@@ -340,10 +311,6 @@
   z-index: $z-index-modal;
 }
 
-/**
- * Botão de fechar
- * @example @include close-button;
- */
 @mixin close-button {
   position: absolute;
   top: -50px;
@@ -361,10 +328,6 @@
   }
 }
 
-/**
- * Botão de navegação
- * @example @include nav-button;
- */
 @mixin nav-button {
   position: absolute;
   top: 50%;
@@ -418,4 +381,37 @@
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
   40% { transform: translateY(-10px); }
   60% { transform: translateY(-5px); }
+}
+
+// -----------------------------------------------------------------------------
+// MIXIN UNIVERSAL DE BREAKPOINT
+// -----------------------------------------------------------------------------
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $breakpoint == 'md' {
+    @media (max-width: 992px) { @content; }
+  }
+  @else if $breakpoint == 'lg' {
+    @media (max-width: 1200px) { @content; }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// AJUSTES RESPONSIVOS UNIVERSAIS PARA BOTÕES NO MOBILE
+// -----------------------------------------------------------------------------
+
+@media (max-width: 768px) {
+  button,
+  .header-button {
+    @include button-base;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto 1rem;
+  }
 }

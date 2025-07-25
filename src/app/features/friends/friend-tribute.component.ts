@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ActivatedRoute, Router, RouterModule} from '@angular/router';
 import {DataService} from '../../shared/services/data.service';
@@ -16,6 +16,10 @@ import {Friend, MessageHistory} from '../../shared/interfaces/friend.interface';
     styleUrls: ['./friend-tribute.component.scss']
 })
 export class FriendTributeComponent implements OnInit, OnDestroy {
+    private dataService = inject(DataService);
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+
     friend: Friend | undefined;
     allFriends: Friend[] = [];
 
@@ -28,11 +32,7 @@ export class FriendTributeComponent implements OnInit, OnDestroy {
 
     currentChibiImage: string | undefined;
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
-        private dataService: DataService,
-    ) {
+    constructor() {
     }
 
     ngOnInit(): void {
