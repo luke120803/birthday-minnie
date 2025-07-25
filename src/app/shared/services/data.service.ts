@@ -41,7 +41,11 @@ export class DataService {
                 },
                 {
                     year: 2025,
-                    text: 'Feliz aniversário, Minnie! Sua amizade é um presente em nossas vidas. Que este novo ano seja cheio de aventuras maravilhosas! 🌟'
+                    text: 'Feliz aniversário, Minnie!\n' +
+                        'Passo aqui apenas para pedir ao Papai do céu que continue lhe transformando nesta filha que reflete o coração de Deus. \n' +
+                        'Cada novo ano nos lembra os desafios que já se passaram e as dificuldades que foram enfrentadas, mas que em meio a tudo isso seus ouvidos se atendem a voz do Senhor, seus pés corram em Sua direção, suas mãos não soltem as mãos dEle e seu coração pertença apenas a Ele.\n' +
+                        'Persevere, o Senhor enxerga cada esforço seu e a capacita para viver seu propósito...\n' +
+                        'Papai do céu lhe abençoe hoje e sempre 🤍'
                 }
             ],
             backgroundColor: '#E6E6FA',
@@ -50,7 +54,7 @@ export class DataService {
         {
             id: 'nicole',
             name: 'Nicole',
-            photo: 'assets/images/foto.nicole.jpeg',
+            photo: 'assets/images/nicole/nicole03.jpeg',
             messages: [
                 {
                     year: 2024,
@@ -58,29 +62,14 @@ export class DataService {
                 },
                 {
                     year: 2025,
-                    text: 'Querida Minnie, você ilumina todos os ambientes com sua presença! Desejo que seu aniversário seja tão especial quanto você é para nós! 💕'
+                    text: 'Feliz aniversário Minnie \n' +
+                        'Que Deus abençoe sempre amiga, que vc continue sendo essa menina doce, meiga e simpática, vc é luz onde passa!\n' +
+                        'amo vc e que a gente tenha mais anos e anos de amizade 🤍'
                 }
             ],
             backgroundColor: '#F0F8FF',
             textColor: '#191970',
         },
-        // {
-        //     id: 'paula',
-        //     name: 'Paula',
-        //     photo: 'assets/images/foto.paula.jpeg',
-        //     messages: [
-        //         {
-        //             year: 2024,
-        //             text: 'Feliz vida amiga! Obrigada por tudo sempre, por todos os momentos bons ao seu lado, você é uma das pessoas mais importantes na minha vida. Eu te amo Minnie 💕'
-        //         },
-        //         {
-        //             year: 2025,
-        //             text: 'Parabéns, Minnie! Sua energia positiva contagia a todos. Que este novo ciclo seja repleto de conquistas e felicidade! 🎂'
-        //         }
-        //     ],
-        //     backgroundColor: '#FFF8DC',
-        //     textColor: '#B8860B',
-        // },
         {
             id: 'sophia',
             name: 'Sophia',
@@ -197,11 +186,10 @@ export class DataService {
 
         },
         {
-            id: 'analuiza',
+            id: 'analuiza', // ID CORRIGIDO E UNIFICADO
             name: 'Ana Luiza',
             photo: 'assets/images/analuiza/analu02.jpg',
             messages: [
-                {year: 2024, text: ''},
                 {
                     year: 2025,
                     text: 'FELIZ ANIVERSÁRIO para minha linda e incrível melhor amiga! 😘\n' +
@@ -216,11 +204,23 @@ export class DataService {
             textColor: '#2F4F4F',
         },
         {
+            id: 'luiza', // ESTE AMIGO FOI UNIFICADO NO 'analuiza'
+            name: 'Luiza', // MANTIDO PARA COMPATIBILIDADE, MAS SEM FOTOS ASSOCIADAS
+            photo: 'assets/images/luiza/luiza.jpg',
+            messages: [
+                {
+                    year: 2025,
+                    text: 'Feliz aniversário Yasmim, saiba q eu amo muito vc, em pouco tempo vc se tornou uma das pessoas mais importantes da minha vida, me arrisco a dizer q quem tem sua amizade tem tudo, sempre companheira, inteligente, alegre, esforçada, , vc é um jóia q nenhuma outra se compara, q vc possa conquistar assim, q vc conquiste todos os seus objetivos, seus sonhos , q Deus possa abençoar sua vida acima de tudo, sempre estarei aq para quando precisar, sempre torcerei pelas suas vitórias, sempre estarei torcendo pelo seu melhor, se eu pudesse definir vc em uma palavra seria "** Carismática **", quero q nossa amizade possa seguir durante anos e anos das nossas vidas, foi uma dádiva conhecer vc, eu tenho vc no meu coração e para vida , amo vc e vou amar nossa amizade com todo respeito, carinho, me arrisco a dizer q vc e a Luiza são minhas almas gêmeas na amizade, tanto quando o Vitor tbm, amo vcs , qr q essa data, o dia do seu aniversário seja lembrado durante anos, e q possamos comemorar durante anos🤍'
+                }
+            ],
+            backgroundColor: '#F0FFFF',
+            textColor: '#2F4F4F',
+        },
+        {
             id: 'vihM',
             name: 'Vitória Machado',
             photo: 'assets/images/vihM/vihM.jpeg',
             messages: [
-                {year: 2024, text: ''},
                 {
                     year: 2025,
                     text: 'Feliz aniversário, Minniocas! ✨\n' +
@@ -238,7 +238,6 @@ export class DataService {
             name: 'Vitória',
             photo: 'assets/images/vitoria/vih.jpg',
             messages: [
-                {year: 2024, text: ''},
                 {
                     year: 2025,
                     text: 'Minnieee, feliz 17 aninhoos meu amor! 🌸🎂\n' +
@@ -255,10 +254,6 @@ export class DataService {
             photo: 'assets/images/eduarda.jpg',
             messages: [
                 {
-                    year: 2024,
-                    text: ''
-                },
-                {
                     year: 2025,
                     text: 'HOJE É UM DIA REALMENTE ESPECIAL!!!!💗🥹 Estamos celebrando o aniversário da pessoa mais adorável e maravilhosa que existe! Parabéns Minie! Que você tenha muitos anos de vida repletos de saúde, paz, amor e felicidade. Que Deus te abençoe imensamente e ilumine todos os seus caminhos por onde você passar. 💗🥹\n' +
                         'Que você continue sendo essa pessoa incrível e amigável que todos nós admiramos. Mais uma vez, desejo que você tenha uma vida longa e que todos os seus sonhos e objetivos se tornem realidade. Feliz aniversário Minie!!🤩🥳💗 Aproveite seu dia com toda a alegria que você merece!!!🥳🎂🎁💞🩰💗'
@@ -267,507 +262,232 @@ export class DataService {
             backgroundColor: '#F0F8FF',
             textColor: '#191970',
         },
-        {
-            id: 'luiza',
-            name: 'Luiza',
-            photo: 'assets/images/luiza/luiza.jpg',
-            messages: [
-                {year: 2024,
-                    text: ''}
-                ,
-                {
-                    year: 2025,
-                    text: 'Feliz aniversário Yasmim, saiba q eu amo muito vc, em pouco tempo vc se tornou uma das pessoas mais importantes da minha vida, me arrisco a dizer q quem tem sua amizade tem tudo, sempre companheira, inteligente, alegre, esforçada, , vc é um jóia q nenhuma outra se compara, q vc possa conquistar assim, q vc conquiste todos os seus objetivos, seus sonhos , q Deus possa abençoar sua vida acima de tudo, sempre estarei aq para quando precisar, sempre torcerei pelas suas vitórias, sempre estarei torcendo pelo seu melhor, se eu pudesse definir vc em uma palavra seria "** Carismática **", quero q nossa amizade possa seguir durante anos e anos das nossas vidas, foi uma dádiva conhecer vc, eu tenho vc no meu coração e para vida , amo vc e vou amar nossa amizade com todo respeito, carinho, me arrisco a dizer q vc e a Luiza são minhas almas gêmeas na amizade, tanto quando o Vitor tbm, amo vcs , qr q essa data, o dia do seu aniversário seja lembrado durante anos, e q possamos comemorar durante anos🤍'
-                }
-            ],
-            backgroundColor: '#F0FFFF',
-            textColor: '#2F4F4F',
-        },
-
     ];
 
     private galleryImages: GalleryImage[] = [
+        // --- ANA LUIZA ---
         {
-            id: '2',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas02.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-1', type: 'image', url: 'assets/images/analuiza/analu.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: '3',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas03.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-2', type: 'image', url: 'assets/images/analuiza/analu02.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: '4',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas04.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-3', type: 'image', url: 'assets/images/analuiza/analu03.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: '5',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas05.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-4', type: 'image', url: 'assets/images/analuiza/analu04.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: '6',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas06.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-5', type: 'image', url: 'assets/images/analuiza/analu05.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: '7',
-            type: 'image',
-            url: 'assets/images/lucas/foto.lucas07.jpeg',
-            alt: 'Lucas - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-6', type: 'image', url: 'assets/images/analuiza/analu06.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
         },
         {
-            id: 'v1',
-            type: 'video',
-            url: 'assets/videos/minnie/minnie02.mp4',
-            thumbnailUrl: 'assets/images/minnie/minnie-chibi-love.png',
-            alt: 'Um vídeo especial da Minnie',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'analuiza-7', type: 'image', url: 'assets/images/analuiza/analu07.jpg',
+            alt: 'Luiza - Elegância natural', caption: 'Memórias', friendId: 'analuiza', friendName: 'Ana Luiza'
+        },
+        // --- EDUARDA ---
+        {
+            id: 'eduarda-1', type: 'image', url: 'assets/images/eduarda.jpg',
+            alt: 'Eduarda - Foto pessoal', caption: 'Memórias', friendId: 'eduarda', friendName: 'Eduarda'
+        },
+        // --- JULIA ---
+        {
+            id: 'julia-1', type: 'image', url: 'assets/images/juh/foto.julia.jpeg',
+            alt: 'Julia - Personalidade marcante', caption: 'Memórias', friendId: 'julia', friendName: 'Julia'
         },
         {
-            id: 'v2',
-            type: 'video',
-            url: 'assets/videos/minnie/minnie.mp4',
-            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png',
-            alt: 'Um vídeo especial da Minnie',
-            caption: 'Memórias',
-            friendId: 'lokkas',
-            friendName: 'Lokkas'
+            id: 'julia-2', type: 'image', url: 'assets/images/juh/foto.julia02.jpeg',
+            alt: 'Julia - Personalidade marcante', caption: 'Memórias', friendId: 'julia', friendName: 'Julia'
         },
         {
-            id: 'v4',
-            type: 'video',
-            url: 'assets/videos/vitoria/vih.mp4',
-            thumbnailUrl: 'assets/images/vitoria/vih.jpg',
-            alt: 'Um vídeo especial com a Minnie',
-            caption: 'Memórias',
-            friendId: 'vitoria',
-            friendName: 'Vitoria'
+            id: 'julia-v1', type: 'video', url: 'assets/videos/juh/juh.mp4',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png', alt: 'Memórias', caption: 'Memórias',
+            friendId: 'julia', friendName: 'Julia'
+        },
+        // --- LOKKAS ---
+        {
+            id: 'lokkas-1', type: 'image', url: 'assets/images/lucas/foto.lucas02.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '8',
-            type: 'image',
-            url: 'assets/images/foto.moih.jpeg',
-            alt: 'Moih - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'moih',
-            friendName: 'Moih'
+            id: 'lokkas-2', type: 'image', url: 'assets/images/lucas/foto.lucas03.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '9',
-            type: 'image',
-            url: 'assets/images/foto.nicole.jpeg',
-            alt: 'Nicole - Foto pessoal',
-            caption: 'Memórias',
-            friendId: 'nicole',
-            friendName: 'Nicole'
+            id: 'lokkas-3', type: 'image', url: 'assets/images/lucas/foto.lucas04.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '10',
-            type: 'image',
-            url: 'assets/images/foto.nicole2.jpeg',
-            alt: 'Nicole - Segunda foto pessoal',
-            caption: 'Memórias',
-            friendId: 'nicole',
-            friendName: 'Nicole'
-        },
-        // {
-        //     id: '11',
-        //     type: 'image',
-        //     url: 'assets/images/foto.paula.jpeg',
-        //     alt: 'Paula - Energia positiva',
-        //     caption: 'Memórias',
-        //     friendId: 'paula',
-        //     friendName: 'Paula'
-        // },
-        {
-            id: '12',
-            type: 'image',
-            url: 'assets/images/sophia/foto.sophia.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Sophia - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'sophia',
-            friendName: 'Sophia'
+            id: 'lokkas-4', type: 'image', url: 'assets/images/lucas/foto.lucas05.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '13',
-            type: 'image',
-            url: 'assets/images/pedro/pedro.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'lokkas-5', type: 'image', url: 'assets/images/lucas/foto.lucas06.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '14',
-            type: 'image',
-            url: 'assets/images/juh/foto.julia.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Julia - Personalidade marcante',
-            caption: 'Memórias',
-            friendId: 'julia',
-            friendName: 'Julia'
+            id: 'lokkas-6', type: 'image', url: 'assets/images/lucas/foto.lucas07.jpeg',
+            alt: 'Lucas - Foto pessoal', caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '15',
-            type: 'image',
-            url: 'assets/images/juh/foto.julia02.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Julia - Personalidade marcante',
-            caption: 'Memórias',
-            friendId: 'julia',
-            friendName: 'Julia'
-        },
-
-        {
-            id: 'v3',
-            type: 'video',
-            url: 'assets/videos/juh/juh.mp4',
-            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png',
-            alt: 'Memórias',
-            caption: 'Memórias',
-            friendId: 'julia',
-            friendName: 'Julia'
+            id: 'lokkas-v1', type: 'video', url: 'assets/videos/minnie/minnie02.mp4',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-love.png', alt: 'Um vídeo especial da Minnie',
+            caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
         },
         {
-            id: '16',
-            type: 'image',
-            url: 'assets/images/thiago/foto.thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Thiago - Momento divertido',
-            caption: 'Memórias',
-            friendId: 'thiago',
-            friendName: 'Thiago'
+            id: 'lokkas-v2', type: 'video', url: 'assets/videos/minnie/minnie.mp4',
+            thumbnailUrl: 'assets/images/minnie/minnie-chibi-excited.png', alt: 'Um vídeo especial da Minnie',
+            caption: 'Memórias', friendId: 'lokkas', friendName: 'Lokkas'
+        },
+        // --- MOIH ---
+        {
+            id: 'moih-1', type: 'image', url: 'assets/images/foto.moih.jpeg',
+            alt: 'Moih - Foto pessoal', caption: 'Memórias', friendId: 'moih', friendName: 'Moih'
+        },
+        // --- NICOLE ---
+        {
+            id: 'nicole-1', type: 'image', url: 'assets/images/nicole/foto.nicole.jpeg',
+            alt: 'Nicole - Foto pessoal', caption: 'Memórias', friendId: 'nicole', friendName: 'Nicole'
         },
         {
-            id: '17',
-            type: 'image',
-            url: 'assets/images/tirza/tirza.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'nicole-2', type: 'image', url: 'assets/images/nicole/foto.nicole2.jpeg',
+            alt: 'Nicole - Segunda foto pessoal', caption: 'Memórias', friendId: 'nicole', friendName: 'Nicole'
         },
         {
-            id: '18',
-            type: 'image',
-            url: 'assets/images/luiza/luiza.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - sua best',
-            caption: 'Memórias',
-            friendId: 'luiza',
-            friendName: 'Luiza',
+            id: 'nicole-3', type: 'image', url: 'assets/images/nicole/nicole03.jpeg',
+            alt: 'Nicole - Terceira foto pessoal', caption: 'Memórias', friendId: 'nicole', friendName: 'Nicole'
+        },
+        // --- PEDRO ---
+        {
+            id: 'pedro-1', type: 'image', url: 'assets/images/pedro/pedro.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '19',
-            type: 'image',
-            url: 'assets/images/pedro/foto.pedro.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-2', type: 'image', url: 'assets/images/pedro/foto.pedro.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '20',
-            type: 'image',
-            url: 'assets/images/pedro/pedro02.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-3', type: 'image', url: 'assets/images/pedro/pedro02.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '21',
-            type: 'image',
-            url: 'assets/images/pedro/pedro03.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-4', type: 'image', url: 'assets/images/pedro/pedro03.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '22',
-            type: 'image',
-            url: 'assets/images/pedro/pedro04.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-5', type: 'image', url: 'assets/images/pedro/pedro04.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '23',
-            type: 'image',
-            url: 'assets/images/pedro/pedro05.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-6', type: 'image', url: 'assets/images/pedro/pedro05.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
         },
         {
-            id: '24',
-            type: 'image',
-            url: 'assets/images/pedro/pedro06.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Pedro - Carisma único',
-            caption: 'Memórias',
-            friendId: 'pedro',
-            friendName: 'Pedro'
+            id: 'pedro-7', type: 'image', url: 'assets/images/pedro/pedro06.jpeg',
+            alt: 'Pedro - Carisma único', caption: 'Memórias', friendId: 'pedro', friendName: 'Pedro'
+        },
+        // --- SOPHIA ---
+        {
+            id: 'sophia-1', type: 'image', url: 'assets/images/sophia/foto.sophia.jpeg',
+            alt: 'Sophia - Elegância natural', caption: 'Memórias', friendId: 'sophia', friendName: 'Sophia'
         },
         {
-            id: '25',
-            type: 'image',
-            url: 'assets/images/thiago/thiago.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Thiago - Momento divertido',
-            caption: 'Memórias',
-            friendId: 'thiago',
-            friendName: 'Thiago'
+            id: 'sophia-2', type: 'image', url: 'assets/images/sophia/sophia.jpeg',
+            alt: 'Sophia - Elegância natural', caption: 'Memórias', friendId: 'sophia', friendName: 'Sophia'
+        },
+        // --- THIAGO ---
+        {
+            id: 'thiago-1', type: 'image', url: 'assets/images/thiago/foto.thiago.jpeg',
+            alt: 'Thiago - Momento divertido', caption: 'Memórias', friendId: 'thiago', friendName: 'Thiago'
         },
         {
-            id: '27',
-            type: 'image',
-            url: 'assets/images/tirza/tirza02.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'thiago-2', type: 'image', url: 'assets/images/thiago/thiago.jpeg',
+            alt: 'Thiago - Momento divertido', caption: 'Memórias', friendId: 'thiago', friendName: 'Thiago'
+        },
+        // --- TIRZA ---
+        {
+            id: 'tirza-1', type: 'image', url: 'assets/images/tirza/tirza.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '28',
-            type: 'image',
-            url: 'assets/images/tirza/tirza03.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-2', type: 'image', url: 'assets/images/tirza/tirza02.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '29',
-            type: 'image',
-            url: 'assets/images/tirza/tirza04.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-3', type: 'image', url: 'assets/images/tirza/tirza03.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '30',
-            type: 'image',
-            url: 'assets/images/tirza/tirza05.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-4', type: 'image', url: 'assets/images/tirza/tirza04.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '31',
-            type: 'image',
-            url: 'assets/images/tirza/tirza06.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-5', type: 'image', url: 'assets/images/tirza/tirza05.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '32',
-            type: 'image',
-            url: 'assets/images/tirza/tirza07.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-6', type: 'image', url: 'assets/images/tirza/tirza06.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '33',
-            type: 'image',
-            url: 'assets/images/tirza/tirza08.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-7', type: 'image', url: 'assets/images/tirza/tirza07.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '34',
-            type: 'image',
-            url: 'assets/images/tirza/tirza09.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-8', type: 'image', url: 'assets/images/tirza/tirza08.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '35',
-            type: 'image',
-            url: 'assets/images/tirza/tirza10.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-9', type: 'image', url: 'assets/images/tirza/tirza09.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '36',
-            type: 'image',
-            url: 'assets/images/tirza/tirza11.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-10', type: 'image', url: 'assets/images/tirza/tirza10.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '37',
-            type: 'image',
-            url: 'assets/images/tirza/tirza12.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-11', type: 'image', url: 'assets/images/tirza/tirza11.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '38',
-            type: 'image',
-            url: 'assets/images/tirza/tirza13.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-12', type: 'image', url: 'assets/images/tirza/tirza12.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '39',
-            type: 'image',
-            url: 'assets/images/tirza/tirza14.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-13', type: 'image', url: 'assets/images/tirza/tirza13.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '40',
-            type: 'image',
-            url: 'assets/images/tirza/tirza15.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Tirza - Inspiração constante',
-            caption: 'Memórias',
-            friendId: 'tirza',
-            friendName: 'Tirza'
+            id: 'tirza-14', type: 'image', url: 'assets/images/tirza/tirza14.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
         },
         {
-            id: '41',
-            type: 'image',
-            url: 'assets/images/sophia/sophia.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Sophia - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'sophia',
-            friendName: 'Sophia'
+            id: 'tirza-15', type: 'image', url: 'assets/images/tirza/tirza15.jpeg',
+            alt: 'Tirza - Inspiração constante', caption: 'Memórias', friendId: 'tirza', friendName: 'Tirza'
+        },
+        // --- VITORIA ---
+        {
+            id: 'vitoria-v1', type: 'video', url: 'assets/videos/vitoria/vih.mp4',
+            thumbnailUrl: 'assets/images/vitoria/vih.jpg', alt: 'Um vídeo especial com a Minnie', caption: 'Memórias',
+            friendId: 'vitoria', friendName: 'Vitória'
+        },
+        // --- VITORIA MACHADO ---
+        {
+            id: 'vihM-1', type: 'image', url: 'assets/images/vihM/vihM.jpeg',
+            alt: 'Vitoria - midianita', caption: 'Memórias', friendId: 'vihM', friendName: 'Vitória Machado'
         },
         {
-            id: '42',
-            type: 'image',
-            url: 'assets/images/analuiza/analu.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '43',
-            type: 'image',
-            url: 'assets/images/vihM/vihM.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Vitoria - midianita',
-            caption: 'Memórias',
-            friendId: 'vihM',
-            friendName: 'VihM'
-        },
-        {
-            id: '44',
-            type: 'image',
-            url: 'assets/images/vihM/vihM02.jpeg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Vitoria - midianita',
-            caption: 'Memórias',
-            friendId: 'vihM',
-            friendName: 'VihM'
-        },
-        {
-            id: '45',
-            type: 'image',
-            url: 'assets/images/eduarda.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Vitoria - midianita',
-            caption: 'Memórias',
-            friendId: 'eduarda',
-            friendName: 'Eduarda'
-        },
-        {
-            id: '46',
-            type: 'image',
-            url: 'assets/images/analuiza/analu02.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '47',
-            type: 'image',
-            url: 'assets/images/analuiza/analu03.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '48',
-            type: 'image',
-            url: 'assets/images/analuiza/analu04.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '49',
-            type: 'image',
-            url: 'assets/images/analuiza/analu05.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '50',
-            type: 'image',
-            url: 'assets/images/analuiza/analu06.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
-        },
-        {
-            id: '51',
-            type: 'image',
-            url: 'assets/images/analuiza/analu07.jpg?auto=compress&cs=tinysrgb&w=600',
-            alt: 'Luiza - Elegância natural',
-            caption: 'Memórias',
-            friendId: 'analuiza',
-            friendName: 'Luiza'
+            id: 'vihM-2', type: 'image', url: 'assets/images/vihM/vihM02.jpeg',
+            alt: 'Vitoria - midianita', caption: 'Memórias', friendId: 'vihM', friendName: 'Vitória Machado'
         },
     ];
 
