@@ -24,7 +24,16 @@ export class DataService {
                 },
                 {
                     year: 2025,
-                    text: 'Minnie, você é uma das pessoas mais especiais que conheço! Que seu aniversário seja repleto de alegria e realizações. Parabéns, querida! 🎉'
+                    text: 'Feliz aniversário, minha princesa!\n' +
+                        'Que Deus continue lhe abençoando e lhe usando como essa serva e filha tão esforçada que você é.\n' +
+                        'Você tem um coração gigante e uma energia tão boa, que só você consegue transmitir — às vezes é energética, mas também é calmante.\n' +
+                        'Esse seu jeito tão único faz de você uma pessoa muito especial e me faz querer estar sempre perto de você.\n' +
+                        'Obrigado por me proporcionar momentos tão memoráveis nesse curto período em que estamos juntos.\n' +
+                        'Meu carinho por você só aumenta quanto mais eu te conheço, e isso me faz querer ser uma pessoa melhor, para poder retribuir todo o carinho e conforto que você me faz sentir.\n' +
+                        'Que hoje seja um dia para celebrar a sua vida e agradecer por ter alguém tão especial em nossas vidas — alguém que torna tudo mais alegre.\n' +
+                        'Espero poder demonstrar, não só hoje, mas todos os dias, esse carinho que sinto por você e o quanto eu amo sua companhia e a sua vida, minha querida Sunflower ✨\n' +
+                        'Aproveite seu dia, e que ele venha se repetir por muitos e muitos anos!\n' +
+                        'Te amo, minha preciosa Minnie 🥰💜'
                 }
             ],
             backgroundColor: '#FFE4E1',
@@ -33,7 +42,7 @@ export class DataService {
         {
             id: 'moih',
             name: 'Moih',
-            photo: 'assets/images/foto.moih.jpeg',
+            photo: 'assets/images/bemaventurados.png',
             messages: [
                 {
                     year: 2024,
@@ -351,6 +360,10 @@ export class DataService {
         // --- MOIH ---
         {
             id: 'moih-1', type: 'image', url: 'assets/images/foto.moih.jpeg',
+            alt: 'Moih - Foto pessoal', caption: 'Memórias', friendId: 'moih', friendName: 'Moih'
+        },
+        {
+            id: 'moih-2', type: 'image', url: 'assets/images/bemaventurados.png',
             alt: 'Moih - Foto pessoal', caption: 'Memórias', friendId: 'moih', friendName: 'Moih'
         },
         // --- NICOLE ---
